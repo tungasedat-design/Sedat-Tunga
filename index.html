@@ -53,6 +53,7 @@
       background: rgba(255, 255, 255, 0.15) !important;
     }
     
+    /* 7 ALAN İÇİN GELİŞMİŞ GRID */
     .credential-list-7 {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -68,14 +69,6 @@
     }
     body.dark .credential-list-7 .credential {
       background: var(--paper);
-    }
-
-    /* KESİN GÖRÜNÜR MODAL DÜZELTMESİ */
-    #article-modal.is-visible {
-      display: flex !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-      z-index: 999999 !important;
     }
   </style>
 </head>
@@ -107,6 +100,12 @@
           </button>
           <button type="button" class="lang-btn" id="btn-en" onclick="changeSiteLanguage('en')" title="English">
             <img src="https://flagcdn.com/w40/gb.png" alt="English">
+          </button>
+          <button type="button" class="lang-btn" id="btn-el" onclick="changeSiteLanguage('el')" title="Ελληνικά">
+            <img src="https://flagcdn.com/w40/gr.png" alt="Ελληνικά">
+          </button>
+          <button type="button" class="lang-btn" id="btn-ru" onclick="changeSiteLanguage('ru')" title="Русский">
+            <img src="https://flagcdn.com/w40/ru.png" alt="Русский">
           </button>
         </div>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="icon"><use href="#moon"></use></svg></button>
@@ -185,6 +184,7 @@
           </article>
         </div>
         
+        <!-- 7 AYRI ALAN KARTI -->
         <div class="credential-list-7">
           <article class="credential">
             <span class="tiny-label" data-i18n="card_1_label">Alan 01</span>
@@ -225,7 +225,7 @@
       </div>
     </section>
 
-    <!-- ÇALIŞMA ALANLARI -->
+    <!-- ÇALIŞMA ALANLARI (7 ALAN LİSTESİ) -->
     <section class="section" id="alanlar">
       <div class="shell areas-layout">
         <div>
@@ -265,21 +265,21 @@
             <div class="article-meta"><span data-i18n="filter_maritime">Deniz Hukuku</span><time datetime="2026-06-12">12.06.2026</time></div>
             <h3 data-i18n="post_1_title">Gemi İhtiyati Haczi ve Deniz Alacaklarının Teminat Altına Alınması</h3>
             <p data-i18n="post_1_desc">TTK ve 1999 Cenevre Sözleşmesi uyarınca gemi tutuklama şartları ve deniz alacaklarının icrai güvencesi.</p>
-            <button type="button" class="article-link" onclick="openArticleByKey('deniz-haciz')"><span data-i18n="read_btn">Yazıyı oku</span> →</button>
+            <button class="article-link" type="button" data-article="deniz-haciz" data-i18n="read_btn">Yazıyı oku</button>
           </article>
           
           <article class="article-card" data-category="Deniz İş Hukuku">
             <div class="article-meta"><span data-i18n="filter_seafarer">Deniz İş Hukuku</span><time datetime="2026-05-28">28.05.2026</time></div>
             <h3 data-i18n="post_2_title">Gemiadamlarının Ücret Güvencesi ve Kanuni Rehin Hakkı</h3>
             <p data-i18n="post_2_desc">854 sayılı Deniz İş Kanunu kapsamında gemiadamı alacaklarının deniz alacağı niteliği ve gemi üzerindeki imtiyazı.</p>
-            <button type="button" class="article-link" onclick="openArticleByKey('gemiadami-haklari')"><span data-i18n="read_btn">Yazıyı oku</span> →</button>
+            <button class="article-link" type="button" data-article="gemiadami-haklari" data-i18n="read_btn">Yazıyı oku</button>
           </article>
           
           <article class="article-card" data-category="Kira Hukuku">
             <div class="article-meta"><span data-i18n="filter_tenancy">Kira Hukuku</span><time datetime="2026-05-06">06.05.2026</time></div>
             <h3 data-i18n="post_3_title">Tahliye Taahhütnamesinin Geçerlilik Koşulları ve İcrası</h3>
             <p data-i18n="post_3_desc">TBK hükümleri ve Yargıtay içtihatları ışığında tahliye taahhüdünün tanzim zamanı ve icra takibi prosedürü.</p>
-            <button type="button" class="article-link" onclick="openArticleByKey('tahliye-taahhut')"><span data-i18n="read_btn">Yazıyı oku</span> →</button>
+            <button class="article-link" type="button" data-article="tahliye-taahhut" data-i18n="read_btn">Yazıyı oku</button>
           </article>
         </div>
         <p class="no-results" id="no-results" data-i18n="no_results">Aramanızla eşleşen bir yazı bulunamadı.</p>
@@ -354,6 +354,16 @@
           cat: 'Maritime Law · 12 June 2026',
           title: 'Precautionary Ship Arrest and Securing Maritime Claims',
           body: '<p>Ship arrest is one of the most vital remedies for securing maritime claims under Turkish Commercial Code and the 1999 Geneva Arrest Convention. Precautionary arrest can only be granted for recognized maritime claims such as bunker supply, charterparty breaches, and collision damages.</p>'
+        },
+        el: {
+          cat: 'Ναυτικό Δίκαιο · 12 Ιουνίου 2026',
+          title: 'Συντηρητική Κατάσχεση Πλοίου και Εξασφάλιση Ναυτικών Απαιτήσεων',
+          body: '<p>Η συντηρητική κατάσχεση πλοίου αποτελεί θεμελιώδες μέσο για την εξασφάλιση ναυτικών απαιτήσεων σύμφωνα με το Τουρκικό Εμπορικό Δίκαιο και τη Σύμβαση της Γενεύης του 1999.</p>'
+        },
+        ru: {
+          cat: 'Морское право · 12 июня 2026',
+          title: 'Арест морских судов и обеспечение морских требований',
+          body: '<p>Арест морских судов (ship arrest) является наиболее действенным инструментом обеспечения морских требований в соответствии с турецким законодательством и Женевской конвенцией 1999 года.</p>'
         }
       },
       'gemiadami-haklari': {
@@ -366,6 +376,16 @@
           cat: 'Maritime Labour Law · 28 May 2026',
           title: 'Seafarers\' Wage Protection and Maritime Liens',
           body: '<p>Under Turkish Maritime Labour Law and Maritime Commercial Code, crew wages and employment claims constitute statutory maritime liens, granting priority over mortgages during ship auction proceeds.</p>'
+        },
+        el: {
+          cat: 'Ναυτεργατικό Δίκαιο · 28 Μαΐου 2026',
+          title: 'Προστασία Μισθών Ναυτικών και Ναυτικά Προνόμια',
+          body: '<p>Οι απαιτήσεις των ναυτικών για δεδουλευμένους μισθούς και αποζημιώσεις απολαμβάνουν ειδικό ναυτικό προνόμιο επί του πλοίου, προηγούμενες ακόμη και των ενυπόθηκων δανειστών.</p>'
+        },
+        ru: {
+          cat: 'Морское трудовое право · 28 мая 2026',
+          title: 'Защита заработной платы моряков и морской залог',
+          body: '<p>Требования членов экипажа по заработной плате и компенсациям обладают статусом привилегированного морского требования и имеют приоритет перед ипотечными кредиторами при реализации судна.</p>'
         }
       },
       'tahliye-taahhut': {
@@ -378,6 +398,16 @@
           cat: 'Tenancy & Real Estate Law · 06 May 2026',
           title: 'Eviction Undertakings and Enforcement in Turkish Tenancy Law',
           body: '<p>Under Turkish Code of Obligations, written eviction undertakings allow landlords to execute eviction orders through enforcement offices provided strict statutory timing requirements are met.</p>'
+        },
+        el: {
+          cat: 'Δίκαιο Μισθώσεων · 06 Μαΐου 2026',
+          title: 'Υπεύθυνη Δήλωση Εκκένωσης και Αναγκαστική Εκτέλεση σε Μισθώσεις',
+          body: '<p>Νομικές προϋποθέσεις εγκυρότητας και εκτέλεσης της έγγραφης δέσμευσης εκκένωσης μισθίου ακινήτου σύμφωνα με το Τουρκικό Ενοχικό Δίκαιο.</p>'
+        },
+        ru: {
+          cat: 'Арендное право · 06 мая 2026',
+          title: 'Обязательство об освобождении помещения и процедура выселения',
+          body: '<p>Условия действительности письменного обязательства арендатора об освобождении недвижимости и порядок принудительного исполнения через службу судебных исполнителей.</p>'
         }
       }
     };
@@ -480,6 +510,104 @@
         form_note: 'This form is for informational inquiries and does not constitute formal legal counsel.',
         footer_rights: 'All rights reserved.',
         footer_legal: 'The content on this website is prepared in compliance with the relevant professional regulations for general informational purposes only.'
+      },
+      el: {
+        nav_about: 'Σχετικά', nav_resume: 'Βιογραφικό', nav_practice: 'Τομείς', nav_articles: 'Άρθρα', nav_contact: 'Επικοινωνία',
+        hero_eyebrow: 'Ναυτικό · Αγοραπωλησίες · Μισθώσεις & Συμβάσεις',
+        hero_title: 'Προσεγγίζοντας νομικά ζητήματα με <span>ακρίβεια</span>.',
+        hero_desc: 'Εξειδικευμένες νομικές υπηρεσίες στο ναυτικό δίκαιο, αγοραπωλησίες πλοίων, ναυτεργατικά, εκτέλεση, μισθώσεις και συμβάσεις από τον Δικηγόρο Sedat Tunga.',
+        hero_btn_resume: 'Βιογραφικό', hero_btn_articles: 'Άρθρα',
+        about_eyebrow: 'Σχετικά', about_title: 'Ποιος είναι ο <em>Av. Sedat Tunga;</em>',
+        about_p1: 'Ο Sedat Tunga αποφοίτησε από τη <strong>Νομική Σχολή του Πανεπιστημίου Koç</strong> το 2023. Ολοκλήρωσε το μεταπτυχιακό του (LL.M.) στο Διεθνές Ναυτικό Δίκαιο στο <strong>Swansea University</strong> το 2024.',
+        about_p2: 'Η ακαδημαϊκή του έρευνα επικεντρώθηκε στα <strong>Ναυλοσύμφωνα (Charterparties)</strong> και τη <strong>Θαλάσσια Ασφάλιση (Marine Insurance)</strong>.',
+        about_p3: 'Σήμερα παρέχει νομικές υπηρεσίες στο Ναυτικό Εμπόριο, Αγοραπωλησίες Πλοίων/Σκαφών, Ναυτεργατικό Δίκαιο, Αναγκαστική Εκτέλεση, Μισθώσεις, Εργατικό και Εμπορικές Συμβάσεις.',
+        disclaimer_label: 'Σημείωση:', disclaimer_text: 'Το περιεχόμενο προορίζεται αποκλειστικά για ενημερωτικούς σκοπούς.',
+        resume_eyebrow: 'Εκπαίδευση & Εμπειρία', resume_title: 'Ακαδημαϊκή πορεία και <em>εξειδίκευση</em>.',
+        resume_intro: 'Συνδυασμός διεθνούς ναυτιλιακής πρακτικής και ακαδημαϊκού υποβάθρου.',
+        timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Μεταπτυχιακό στο Διεθνές Ναυτικό Δίκαιο. Ειδίκευση σε ναυλοσύμφωνα και ναυτασφαλίσεις.',
+        timeline_2_title: 'Koç University — Πτυχίο Νομικής', timeline_2_desc: 'Αποφοίτηση Νομικής με έμφαση στο ιδιωτικό και εμπορικό δίκαιο.',
+        timeline_current: 'ΣΗΜΕΡΑ', timeline_3_title: 'Δικηγορική Πρακτική', timeline_3_desc: 'Ναυτικό δίκαιο, αγοραπωλησίες πλοίων, εκτέλεση απαιτήσεων, μισθώσεις και εμπορικές συμβάσεις.',
+        
+        card_1_label: 'Τομέας 01', card_1_title: 'Ναυτικό Εμπορικό Δίκαιο', card_1_desc: 'Κατασχέσεις πλοίων, ναυλοσύμφωνα, ναύλοι, ζημίες φορτίου και θαλάσσια ασφάλιση.',
+        card_2_label: 'Τομέας 02', card_2_title: 'Αγοραπωλησίες Πλοίων/Σκαφών', card_2_desc: 'Συμβάσεις MOA, νηολόγηση, αλλαγή σημαίας και νομικός έλεγχος (due diligence).',
+        card_3_label: 'Τομέας 03', card_3_title: 'Ναυτεργατικό Δίκαιο', card_3_desc: 'Συμβάσεις ναυτολόγησης, δεδουλευμένοι μισθοί, αποζημιώσεις και ναυτικά προνόμια.',
+        card_4_label: 'Τομέας 04', card_4_title: 'Αναγκαστική Εκτέλεση', card_4_desc: 'Είσπραξη απαιτήσεων, διαταγές πληρωμής, συντηρητικές κατασχέσεις και εκποίηση.',
+        card_5_label: 'Τομέας 05', card_5_title: 'Δίκαιο Μισθώσεων', card_5_desc: 'Αγωγές έξωσης (υπεύθυνη δήλωση, ιδιοκατοίκηση), καθορισμός και αναπροσαρμογή μισθώματος.',
+        card_6_label: 'Τομέας 06', card_6_title: 'Εργατικό Δίκαιο', card_6_desc: 'Αποζημιώσεις απόλυσης, υπερωρίες, ακυρότητα απόλυσης και συμβάσεις εργασίας.',
+        card_7_label: 'Τομέας 07', card_7_title: 'Δίκαιο Συμβάσεων', card_7_desc: 'Σύνταξη, διαπραγμάτευση και ανάλυση κινδύνου εθνικών και διεθνών εμπορικών συμβάσεων.',
+
+        practice_eyebrow: 'Τομείς Εξειδίκευσης', practice_title: 'Τομείς <em>δραστηριότητας</em>.',
+        practice_intro: 'Ολοκληρωμένη νομική υποστήριξη προσαρμοσμένη στις ανάγκες του εντολέα.',
+        area_1_title: 'Ναυτικό Εμπορικό Δίκαιο', area_1_desc: 'Συντηρητική κατάσχεση πλοίων, ναυλοσύμφωνα, απαιτήσεις φορτίου και ναυτασφαλίσεις.',
+        area_2_title: 'Αγοραπωλησίες Πλοίων & Σκαφών', area_2_desc: 'Συμβάσεις Saleform/MOA, μεταβίβαση κυριότητας, νηολόγηση και αλλαγή σημαίας.',
+        area_3_title: 'Ναυτεργατικό Δίκαιο', area_3_desc: 'Ναυτολόγηση, μισθοί, αποζημιώσεις και προνομιακή ικανοποίηση επί του πλοίου.',
+        area_4_title: 'Αναγκαστική Εκτέλεση', area_4_desc: 'Είσπραξη οφειλών, ανακοπές και ρευστοποίηση εξασφαλίσεων.',
+        area_5_title: 'Δίκαιο Μισθώσεων', area_5_desc: 'Εκτέλεση δηλώσεων εκκένωσης, αγωγές έξωσης και αναπροσαρμογή ενοικίου.',
+        area_6_title: 'Εργατικό Δίκαιο', area_6_desc: 'Εργατικές διαφορές, αποζημιώσεις, mobbing και εργατικά ατυχήματα.',
+        area_7_title: 'Δίκαιο Συμβάσεων', area_7_desc: 'Εμπορικές συμβάσεις, συμφωνίες διανομής, franchise και εταιρικές συμφωνίες.',
+
+        articles_eyebrow: 'Άρθρα / Μελέτες', articles_title: 'Νομικές σημειώσεις και <em>αναλύσεις</em>.',
+        search_placeholder: 'Αναζήτηση άρθρου', filter_all: 'Όλα', filter_maritime: 'Ναυτικό Δίκαιο', filter_seafarer: 'Ναυτεργατικά', filter_tenancy: 'Μισθώσεις',
+        post_1_title: 'Συντηρητική Κατάσχεση Πλοίου και Εξασφάλιση Ναυτικών Απαιτήσεων', post_1_desc: 'Προϋποθέσεις κατάσχεσης πλοίου βάσει του Τουρκικού Εμπορικού Κώδικα και της Σύμβασης Γενεύης 1999.',
+        post_2_title: 'Προστασία Μισθών Ναυτικών και Ναυτικά Προνόμια', post_2_desc: 'Προνομιακή ικανοποίηση απαιτήσεων ναυτικών και ναυτικό προνόμιο επί του πλοίου.',
+        post_3_title: 'Υπεύθυνη Δήλωση Εκκένωσης και Αναγκαστική Εκτέλεση σε Μισθώσεις', post_3_desc: 'Νομικές προϋποθέσεις και διαδικασία αναγκαστικής έξωσης μισθωτή κατά το Τουρκικό Δίκαιο.',
+        read_btn: 'Ανάγνωση', no_results: 'Δεν βρέθηκαν αποτελέσματα.',
+        contact_eyebrow: 'Επικοινωνία', contact_title: 'Άμεση και <em>σαφής</em> επικοινωνία.',
+        contact_intro: 'Για αιτήματα παροχής συμβουλών μπορείτε να επικοινωνήσετε μέσω των παρακάτω στοιχείων.',
+        label_email: 'Email', label_phone: 'Τηλέφωνο', label_office: 'Γραφείο', office_location: 'Κωνσταντινούπολη, Τουρκία', vcard_btn: 'Λήψη vCard ↓',
+        form_title: 'Αφήστε ένα μήνυμα.', form_name: 'Ονοματεπώνυμο *', form_email: 'Email *', form_subject: 'Θέμα', form_msg: 'Το μήνυμά σας *', form_send: 'Αποστολή Μηνύματος',
+        form_note: 'Η παρούσα φόρμα δεν δημιουργεί σχέση εντολέα-δικηγόρου.',
+        footer_rights: 'Όλα τα δικαιώματα διατηρούνται.',
+        footer_legal: 'Το περιεχόμενο της ιστοσελίδας παρέχεται για γενική πληροφόρηση.'
+      },
+      ru: {
+        nav_about: 'Обо мне', nav_resume: 'Резюме', nav_practice: 'Практика', nav_articles: 'Статьи', nav_contact: 'Контакты',
+        hero_eyebrow: 'Морское · Купля-Продажа · Аренда и Контракты',
+        hero_title: 'Правовые решения в <span>точном</span> контексте.',
+        hero_desc: 'Профессиональная юридическая помощь: морское право, купля-продажа судов, права моряков, взыскание долгов, аренда, трудовое право и контракты.',
+        hero_btn_resume: 'Смотреть резюме', hero_btn_articles: 'Читать статьи',
+        about_eyebrow: 'Обо мне', about_title: 'Кто такой <em>адвокат Седат Тунга?</em>',
+        about_p1: 'Адвокат Седат Тунга окончил <strong>Юридический факультет Университета Коч</strong> в 2023 году. В 2024 году завершил магистратуру (LL.M.) по международному морскому праву в <strong>Университете Суонси</strong> (Swansea University, Великобритания).',
+        about_p2: 'В рамках магистратуры его диссертация была посвящена договорам <strong>фрахтования (Charterparties)</strong> и <strong>морскому страхованию (Marine Insurance)</strong>.',
+        about_p3: 'Ведет практику в сферах: морское торговое право, купля-продажа судов и яхт, морское трудовое право, исполнительное производство, арендное, трудовое и договорное право.',
+        disclaimer_label: 'Примечание:', disclaimer_text: 'Материалы сайта носят исключительно информационный характер.',
+        resume_eyebrow: 'Образование и Опыт', resume_title: 'Образование, специализация и <em>практика</em>.',
+        resume_intro: 'Сочетание международного морского права и практического опыта.',
+        timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Магистр международного морского права. Исследования договоров фрахтования и страхования.',
+        timeline_2_title: 'Koç University — Бакалавр', timeline_2_desc: 'Юридический факультет, специализация на частном праве.',
+        timeline_current: 'НАСТОЯЩЕЕ ВРЕМЯ', timeline_3_title: 'Адвокатская деятельность', timeline_3_desc: 'Морское право, сделки с судами, исполнительное производство, арендные, трудовые и контрактные споры.',
+        
+        card_1_label: 'Сфера 01', card_1_title: 'Морское торговое право', card_1_desc: 'Арест судов, чартерные споры, фрахт, претензии по грузу и морское страхование.',
+        card_2_label: 'Сфера 02', card_2_title: 'Купля-продажа судов и яхт', card_2_desc: 'Договоры MOA, регистрация флага и реестра, закрытие сделок и due diligence.',
+        card_3_label: 'Сфера 03', card_3_title: 'Морское трудовое право', card_3_desc: 'Трудовые договоры моряков, задолженность по зарплате, выходные пособия и морской залог.',
+        card_4_label: 'Сфера 04', card_4_title: 'Исполнительное производство', card_4_desc: 'Судебное и внесудебное взыскание долгов, обеспечительные меры и обращение взыскания.',
+        card_5_label: 'Сфера 05', card_5_title: 'Арендное право', card_5_desc: 'Выселение арендаторов (обязательство, неуплата), определение и пересмотр арендной платы.',
+        card_6_label: 'Сфера 06', card_6_title: 'Трудовое право', card_6_desc: 'Восстановление на работе, выходные пособия, компенсации, моббинг и трудовые договоры.',
+        card_7_label: 'Сфера 07', card_7_title: 'Договорное право', card_7_desc: 'Составление, аудит рисков и расторжение национальных и международных коммерческих контрактов.',
+
+        practice_eyebrow: 'Сферы практики', practice_title: 'Ключевые направления <em>деятельности</em>.',
+        practice_intro: 'Комплексная юридическая защита интересов клиентов.',
+        area_1_title: 'Морское торговое право', area_1_desc: 'Арест судов, чартер-партии, претензии по грузам и споры по страхованию.',
+        area_2_title: 'Купля-продажа судов и яхт', area_2_desc: 'Контракты Saleform/MOA, смени флага, регистрация права собственности.',
+        area_3_title: 'Морское трудовое право', area_3_desc: 'Защита зарплаты моряков, морской залог и споры с судовладельцами.',
+        area_4_title: 'Исполнительное производство', area_4_desc: 'Взыскание задолженностей, наложение арестов и исполнение решений.',
+        area_5_title: 'Арендное право', area_5_desc: 'Принудительное выселение арендаторов, споры по арендной плате.',
+        area_6_title: 'Трудовое право', area_6_desc: 'Трудовые споры, взыскание компенсаций, несчастные случаи на производстве.',
+        area_7_title: 'Договорное право', area_7_desc: 'Дистрибьюторские, франчайзинговые и партнерские соглашения.',
+
+        articles_eyebrow: 'Блог / Аналитика', articles_title: 'Правовые заметки и <em>анализ</em>.',
+        search_placeholder: 'Поиск статей', filter_all: 'Все', filter_maritime: 'Морское право', filter_seafarer: 'Морской труд', filter_tenancy: 'Аренда',
+        post_1_title: 'Арест морских судов и обеспечение морских требований', post_1_desc: 'Условия наложения ареста на суда в соответствии с ТТК Турции и Женевской конвенцией 1999 года.',
+        post_2_title: 'Защита заработной платы моряков и морской залог', post_2_desc: 'Привилегированный статус требований экипажа и порядок принудительного взыскания.',
+        post_3_title: 'Обязательство об освобождении помещения и процедура выселения', post_3_desc: 'Условия действительности обязательства об освобождении и порядок исполнения по закону Турции.',
+        read_btn: 'Читать', no_results: 'Ничего не найдено.',
+        contact_eyebrow: 'Контакты', contact_title: 'Прямой и <em>открытый</em> канал связи.',
+        contact_intro: 'Для первичных обращений рекомендуется письменная связь.',
+        label_email: 'Эл. почта', label_phone: 'Телефон', label_office: 'Офис', office_location: 'Стамбул, Турция', vcard_btn: 'Скачать vCard ↓',
+        form_title: 'Оставить сообщение.', form_name: 'ФИО *', form_email: 'Эл. почта *', form_subject: 'Тема', form_msg: 'Ваше сообщение *', form_send: 'Отправить сообщение',
+        form_note: 'Форма носит информационный характер и не создает отношений адвокат-клиент.',
+        footer_rights: 'Все права защищены.',
+        footer_legal: 'Информация на сайте носит исключительно ознакомительный характер.'
       }
     };
 
@@ -488,7 +616,7 @@
       localStorage.setItem('site_lang', lang);
       document.documentElement.lang = lang;
 
-      ['tr', 'en'].forEach(l => {
+      ['tr', 'en', 'el', 'ru'].forEach(l => {
         const btn = document.getElementById('btn-' + l);
         if (btn) {
           if (l === lang) btn.classList.add('active');
@@ -506,16 +634,12 @@
         const key = el.getAttribute('data-placeholder-i18n');
         if (t[key]) el.placeholder = t[key];
       });
-
-      if (currentActiveArticle && modalEl && modalEl.classList.contains('is-visible')) {
-        renderModalArticle(currentActiveArticle, lang);
-      }
     }
 
     const savedLang = localStorage.getItem('site_lang') || 'tr';
     changeSiteLanguage(savedLang);
 
-    // Koyu / Açık Tema
+    // Tema Yönetimi
     const themeBtn = document.getElementById('theme-toggle');
     const themeIcon = themeBtn ? themeBtn.querySelector('use') : null;
     function setThemeMode(dark) {
@@ -546,71 +670,36 @@
       }));
     }
 
-    // Modal & Dinamik URL Yönetimi (Kesin Açılma Garantisi)
+    // Modal
     const modalEl = document.getElementById('article-modal');
     const modalKicker = document.getElementById('modal-kicker');
     const modalTitle = document.getElementById('modal-title');
     const modalBody = document.getElementById('modal-body');
     const modalClose = document.getElementById('modal-close');
-    let currentActiveArticle = null;
 
-    function renderModalArticle(artKey, lang) {
-      const doc = articlesData[artKey] ? (articlesData[artKey][lang] || articlesData[artKey]['tr']) : null;
-      if (doc && modalEl) {
-        modalKicker.textContent = doc.cat;
-        modalTitle.textContent = doc.title;
-        modalBody.innerHTML = doc.body;
-        modalEl.classList.add('is-visible');
-        modalEl.classList.add('open');
-        document.body.classList.add('no-scroll');
-      }
-    }
-
-    function openArticleByKey(artKey) {
-      currentActiveArticle = artKey;
-      window.location.hash = 'makale/' + artKey;
-      const curL = localStorage.getItem('site_lang') || 'tr';
-      renderModalArticle(artKey, curL);
-    }
+    document.querySelectorAll('[data-article]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const artKey = btn.getAttribute('data-article');
+        const curL = localStorage.getItem('site_lang') || 'tr';
+        const doc = articlesData[artKey] ? (articlesData[artKey][curL] || articlesData[artKey]['tr']) : null;
+        if (doc && modalEl) {
+          modalKicker.textContent = doc.cat;
+          modalTitle.textContent = doc.title;
+          modalBody.innerHTML = doc.body;
+          modalEl.classList.add('open');
+          document.body.classList.add('no-scroll');
+        }
+      });
+    });
 
     function closeModal() {
       if (modalEl) {
-        modalEl.classList.remove('is-visible');
         modalEl.classList.remove('open');
         document.body.classList.remove('no-scroll');
-        currentActiveArticle = null;
-        if (window.location.hash.includes('makale/')) {
-          history.pushState("", document.title, window.location.pathname + window.location.search);
-        }
       }
     }
-
     modalClose?.addEventListener('click', closeModal);
     modalEl?.addEventListener('click', e => { if (e.target === modalEl) closeModal(); });
-
-    function checkHashRoute() {
-      const hash = window.location.hash;
-      if (hash.includes('makale/')) {
-        const artKey = hash.split('makale/')[1];
-        if (articlesData[artKey]) {
-          currentActiveArticle = artKey;
-          const curL = localStorage.getItem('site_lang') || 'tr';
-          renderModalArticle(artKey, curL);
-        }
-      }
-    }
-
-    window.addEventListener('hashchange', () => {
-      const hash = window.location.hash;
-      if (!hash.includes('makale/') && modalEl.classList.contains('is-visible')) {
-        modalEl.classList.remove('is-visible');
-        modalEl.classList.remove('open');
-        document.body.classList.remove('no-scroll');
-        currentActiveArticle = null;
-      }
-    });
-
-    window.addEventListener('DOMContentLoaded', checkHashRoute);
 
     // Filtreleme ve Arama
     const searchInp = document.getElementById('article-search');
