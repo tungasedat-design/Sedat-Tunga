@@ -53,6 +53,7 @@
       background: rgba(255, 255, 255, 0.15) !important;
     }
     
+    /* 7 ALAN İÇİN GELİŞMİŞ GRID */
     .credential-list-7 {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -68,32 +69,6 @@
     }
     body.dark .credential-list-7 .credential {
       background: var(--paper);
-    }
-
-    .article-notice-banner {
-      display: inline-block;
-      padding: 0.6rem 0.9rem;
-      background: rgba(30, 49, 74, 0.05);
-      border-left: 3px solid var(--navy);
-      font-size: 0.76rem;
-      color: var(--ink);
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-    body.dark .article-notice-banner {
-      background: rgba(255, 255, 255, 0.05);
-      border-left-color: var(--navy);
-      color: var(--ink);
-    }
-    .modal-body h2 {
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
-      color: var(--navy);
-      margin: 1.8rem 0 0.8rem;
-    }
-    .modal-body h3 {
-      font-size: 1.15rem;
-      margin: 1.2rem 0 0.5rem;
     }
   </style>
 </head>
@@ -209,6 +184,7 @@
           </article>
         </div>
         
+        <!-- 7 AYRI ALAN KARTI -->
         <div class="credential-list-7">
           <article class="credential">
             <span class="tiny-label" data-i18n="card_1_label">Alan 01</span>
@@ -249,7 +225,7 @@
       </div>
     </section>
 
-    <!-- ÇALIŞMA ALANLARI -->
+    <!-- ÇALIŞMA ALANLARI (7 ALAN LİSTESİ) -->
     <section class="section" id="alanlar">
       <div class="shell areas-layout">
         <div>
@@ -269,55 +245,44 @@
       </div>
     </section>
 
-    <!-- BLOG / İNCELEMELER (BAŞLIK KORUNDU) -->
+    <!-- BLOG / YAZILAR -->
     <section class="section section-soft" id="yazilar">
       <div class="shell">
         <div class="blog-head">
-          <div>
-            <p class="eyebrow">Blog / İncelemeler</p>
-            <h2 class="section-title">Notlar, kararlar ve <em>hukuki</em> incelemeler.</h2>
-          </div>
+          <div><p class="eyebrow" data-i18n="articles_eyebrow">Blog / İncelemeler</p><h2 class="section-title" data-i18n="articles_title">Notlar, kararlar ve <em>hukuki</em> incelemeler.</h2></div>
           <div class="blog-controls">
-            <div class="search-wrap">
-              <svg class="icon"><use href="#search"></use></svg>
-              <input class="search-input" id="article-search" type="search" placeholder="Search dissertation / makale ara" autocomplete="off" />
+            <div class="search-wrap"><svg class="icon"><use href="#search"></use></svg><input class="search-input" id="article-search" type="search" placeholder="Başlık veya konu ara" data-placeholder-i18n="search_placeholder" autocomplete="off" /></div>
+            <div class="filter-row">
+              <button class="filter active" type="button" data-filter="Tümü" data-i18n="filter_all">Tümü</button>
+              <button class="filter" type="button" data-filter="Deniz Hukuku" data-i18n="filter_maritime">Deniz Hukuku</button>
+              <button class="filter" type="button" data-filter="Deniz İş Hukuku" data-i18n="filter_seafarer">Deniz İş</button>
+              <button class="filter" type="button" data-filter="Kira Hukuku" data-i18n="filter_tenancy">Kira Hukuku</button>
             </div>
           </div>
         </div>
-
-        <div style="margin-top: 1.5rem;">
-          <div class="article-notice-banner" id="english-law-banner">
-            <strong>Bilgilendirme / Legal Notice:</strong> Bu akademik incelemeler münhasıran İngiliz Hukuku (English and Welsh Law) mevzuatı ve içtihatları çerçevesinde hazırlanmış olup orijinal akademik dilinde (İngilizce) yayımlanmaktadır.
-          </div>
-        </div>
-
-        <!-- 2 ÖZEL TEZ ÇALIŞMASI -->
-        <div class="article-grid" style="grid-template-columns: repeat(2, 1fr);">
-          
-          <!-- TEZ 1 -->
+        <div class="article-grid">
           <article class="article-card" data-category="Deniz Hukuku">
-            <div class="article-meta">
-              <span>Maritime Law / English Law</span>
-              <time datetime="2024-09-01">LL.M. Thesis</time>
-            </div>
-            <h3 style="font-size: 1.5rem; line-height: 1.2;">Remedies for Non-Payment of Freight and Demurrage in Voyage Charterparties</h3>
-            <p style="margin-top: 0.6rem;">An in-depth analysis of shipowners' possessory liens on cargo and sub-freight, statutory rights in rem, and ship arrest under English & Welsh Law.</p>
-            <a class="article-link" href="#article/freight-demurrage-remedies" data-article-key="freight-demurrage-remedies">Read Thesis →</a>
+            <div class="article-meta"><span data-i18n="filter_maritime">Deniz Hukuku</span><time datetime="2026-06-12">12.06.2026</time></div>
+            <h3 data-i18n="post_1_title">Gemi İhtiyati Haczi ve Deniz Alacaklarının Teminat Altına Alınması</h3>
+            <p data-i18n="post_1_desc">TTK ve 1999 Cenevre Sözleşmesi uyarınca gemi tutuklama şartları ve deniz alacaklarının icrai güvencesi.</p>
+            <button class="article-link" type="button" data-article="deniz-haciz" data-i18n="read_btn">Yazıyı oku</button>
           </article>
           
-          <!-- TEZ 2 -->
-          <article class="article-card" data-category="Deniz Hukuku">
-            <div class="article-meta">
-              <span>Marine Insurance / English Law</span>
-              <time datetime="2024-09-01">LL.M. Thesis</time>
-            </div>
-            <h3 style="font-size: 1.5rem; line-height: 1.2;">Pre-Contractual Duties and Warranties under the Insurance Act 2015</h3>
-            <p style="margin-top: 0.6rem;">A critical examination of the transition from utmost good faith under MIA 1906 to the duty of fair presentation and warranty reform under the Insurance Act 2015.</p>
-            <a class="article-link" href="#article/marine-insurance-act-2015-reforms" data-article-key="marine-insurance-act-2015-reforms">Read Thesis →</a>
+          <article class="article-card" data-category="Deniz İş Hukuku">
+            <div class="article-meta"><span data-i18n="filter_seafarer">Deniz İş Hukuku</span><time datetime="2026-05-28">28.05.2026</time></div>
+            <h3 data-i18n="post_2_title">Gemiadamlarının Ücret Güvencesi ve Kanuni Rehin Hakkı</h3>
+            <p data-i18n="post_2_desc">854 sayılı Deniz İş Kanunu kapsamında gemiadamı alacaklarının deniz alacağı niteliği ve gemi üzerindeki imtiyazı.</p>
+            <button class="article-link" type="button" data-article="gemiadami-haklari" data-i18n="read_btn">Yazıyı oku</button>
           </article>
-
+          
+          <article class="article-card" data-category="Kira Hukuku">
+            <div class="article-meta"><span data-i18n="filter_tenancy">Kira Hukuku</span><time datetime="2026-05-06">06.05.2026</time></div>
+            <h3 data-i18n="post_3_title">Tahliye Taahhütnamesinin Geçerlilik Koşulları ve İcrası</h3>
+            <p data-i18n="post_3_desc">TBK hükümleri ve Yargıtay içtihatları ışığında tahliye taahhüdünün tanzim zamanı ve icra takibi prosedürü.</p>
+            <button class="article-link" type="button" data-article="tahliye-taahhut" data-i18n="read_btn">Yazıyı oku</button>
+          </article>
         </div>
-        <p class="no-results" id="no-results" style="display:none; margin-top: 2rem;">No matching article found.</p>
+        <p class="no-results" id="no-results" data-i18n="no_results">Aramanızla eşleşen bir yazı bulunamadı.</p>
       </div>
     </section>
 
@@ -367,90 +332,86 @@
     </div>
   </footer>
 
-  <!-- TEZLER İÇİN MODAL PENCERESİ -->
+  <!-- MODAL PENCERESİ -->
   <div class="modal" id="article-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <article class="modal-dialog">
       <button class="modal-close" id="modal-close" type="button" aria-label="Kapat"></button>
-      <div class="article-notice-banner" id="modal-law-notice" style="margin-bottom: 1rem; width: 100%;"></div>
       <p class="modal-kicker" id="modal-kicker"></p>
-      <h1 class="modal-title" id="modal-title" style="font-size: 2.1rem; line-height: 1.1; margin-bottom: 1.5rem;"></h1>
-      <div class="modal-body" id="modal-body" style="font-size: 0.95rem; line-height: 1.8; color: var(--ink);"></div>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <div class="modal-body" id="modal-body"></div>
     </article>
   </div>
 
   <script>
-    // 2 TEZİN TAM İNGİLİZCE METNİ
-    const academicDissertations = {
-      'freight-demurrage-remedies': {
-        kicker: 'LL.M. Academic Thesis · Maritime Law (English and Welsh Law)',
-        title: 'Remedies for Non-Payment of Freight and Demurrage in Voyage Charterparties',
-        content: `
-          <h2>INTRODUCTION</h2>
-          <p>The most important implication of non-payment of freight or demurrage in a voyage charterparty has something to do with commercial interests that a shipowner has. Freight is the consideration in money payable for the carriage of goods, while demurrage compensates the owner for losses where delay beyond the agreed laytime occurs. Where in such cases the owner finds that the voyage charterer does not pay, he will have to seek legal redress to secure his compensation. These remedies are, therefore, fundamental in assuaging the financial burden and potential loss of income that would result from such non-payment. This thesis discusses the legal framework and the remedy available to the shipowner upon such defaults, focusing on liens, arrest of vessels, and other ancillary legal mechanisms.</p>
-          
-          <h2>DEMURRAGE</h2>
-          <h3>1. Introduction to Demurrage</h3>
-          <p>Demurrage refers to a predetermined payment that the Owner is entitled to receive for any delay to the vessel that exceeds the agreed laytime, for which the Owner is not at fault. Laytime exceptions will include demurrage solely if they are explicitly stated to that effect. General charter exclusions will not cover demurrage unless their inclusion is essential for their significance.</p>
-          <p>According to Lord Brandon in <em>The Lips</em> demurrage is a legal obligation for damages that a charterer incurs when they keep the chartered ship longer than the agreed-upon lay days, thereby violating their contract. Almost every voyage charter includes a demurrage clause, which specifies the daily rate used to calculate the damages for any delay in the voyage. In the case of <em>Reidar v. Arcos</em>, the Owner successfully demonstrated that due to the delay, the vessel was unable to depart from the port with the intended amount of cargo because the water level over the bar had decreased. As a result, the shipowner received dead freight in addition to demurrage charges.</p>
-          <p>The phrase <em>"once on demurrage always on demurrage"</em> implies that demurrage continues uninterrupted unless delay is attributable to the shipowner's fault (<em>The Fontevivo</em>) or an explicit exception.</p>
-
-          <h3>2. Who is Liable for Paying Demurrage?</h3>
-          <p>In a voyage charter agreement, the charterer is typically responsible. However, holders of the bills of lading may also be held accountable where terms are properly incorporated. In <em>Miramar Maritime Corporation v. Holborn Oil Trading Ltd (The Miramar)</em>, the House of Lords established strict limits on consignee liability unless the bill of lading words expressly confer such obligations.</p>
-
-          <h3>3. Termination of the Charter Party Contract</h3>
-          <p>Certain voyage charterparties explicitly grant the right to terminate in the event of non-payment of demurrage (e.g. clause 7 of GENCON 1994). However, this right is limited to loadport situations; once loaded, bills of lading obligations to third parties prevent easy cancellation.</p>
-
-          <h3>4. Lien and Demurrage</h3>
-          <p>Under English and Welsh law, a common law lien is limited to freight due on delivery, general average contributions, and preservation costs. It excludes demurrage and deadfreight. Hence, an express contractual lien clause is essential (Part VII, Merchant Shipping Act 1894).</p>
-          <p><strong>Exercising Lien on Cargo:</strong> This possessory lien requires continuous possession. Loss of possession forfeits the lien (<em>The Chrysovalandou Dyo</em>). The shipowner must issue a clear demand.</p>
-          <p><strong>Exercising Lien on Sub-Freight:</strong> Clause 8 of GENCON 1994 grants a lien on sub-freight, treated as an equitable assignment (<em>The Bulk Chile</em>; <em>Dearle v Hall</em>). Formal notice must be served before the sub-charterer pays the charterer.</p>
-
-          <h2>FREIGHT</h2>
-          <h3>1. Principles and Calculation</h3>
-          <p>Freight is payable upon right and true delivery (<em>Dakin v. Oxley</em>). Damage to cargo does not entitle the charterer to deduct from freight unless the cargo loses its total commercial identity. Under <em>The Aries</em>, freight is immune from common law and equitable set-off.</p>
-
-          <h3>2. Remedies for Non-Payment</h3>
-          <p>Shipowners may seek summary judgment under CPR Part 24, interim arbitration awards, or self-help possessory liens on cargo and sub-freights (<em>The Nanfri</em>; <em>The Attika Hope</em>).</p>
-
-          <h2>ARRESTING VESSEL OF THE CHARTERER</h2>
-          <p>Under the Senior Courts Act 1981 and the 1952 Arrest Convention, freight and demurrage claims do not give rise to traditional maritime liens. However, they qualify as statutory rights in rem under Section 20(2)(h). Pursuant to Section 21(4), the offending vessel or a sister ship may be arrested if the charterer remains the beneficial owner of all shares at the time the action is brought (<em>The Monica S</em>).</p>
-
-          <h2>CONCLUSION</h2>
-          <p>The remedies available to the shipowner—ranging from cargo liens to ship arrest under Section 21 of the Senior Courts Act 1981—require careful navigation of contractual clauses and conflict of laws at the discharge port.</p>
-        `
+    const articlesData = {
+      'deniz-haciz': {
+        tr: {
+          cat: 'Deniz Hukuku · 12 Haziran 2026',
+          title: 'Gemi İhtiyati Haczi ve Deniz Alacaklarının Teminat Altına Alınması',
+          body: '<p>Gemi ihtiyati haczi (ship arrest), deniz alacaklarının tahsil güvencesini sağlayan en etkili hukuki müesseselerden biridir. 6102 sayılı Türk Ticaret Kanunu (TTK) ve Türkiye\'nin taraf olduğu 1999 Cenevre Konvansiyonu uyarınca, ihtiyati haciz ancak kanunda tahdidi olarak sayılan "deniz alacakları" için talep edilebilir.</p><h3>Uygulama ve Hızlı Tedbir</h3><p>Çarter sözleşmeleri, yakıt (bunker) temini, gemi onarımı veya yük hasarlarından doğan alacaklarda yetkili deniz mahkemesinden teminat mukabilinde karar alınarak geminin limandan kalkışı engellenebilir. Bu süreçte karşı teminat hesaplamaları ve yetkili mahkeme tespiti kritik öneme sahiptir.</p>'
+        },
+        en: {
+          cat: 'Maritime Law · 12 June 2026',
+          title: 'Precautionary Ship Arrest and Securing Maritime Claims',
+          body: '<p>Ship arrest is one of the most vital remedies for securing maritime claims under Turkish Commercial Code and the 1999 Geneva Arrest Convention. Precautionary arrest can only be granted for recognized maritime claims such as bunker supply, charterparty breaches, and collision damages.</p>'
+        },
+        el: {
+          cat: 'Ναυτικό Δίκαιο · 12 Ιουνίου 2026',
+          title: 'Συντηρητική Κατάσχεση Πλοίου και Εξασφάλιση Ναυτικών Απαιτήσεων',
+          body: '<p>Η συντηρητική κατάσχεση πλοίου αποτελεί θεμελιώδες μέσο για την εξασφάλιση ναυτικών απαιτήσεων σύμφωνα με το Τουρκικό Εμπορικό Δίκαιο και τη Σύμβαση της Γενεύης του 1999.</p>'
+        },
+        ru: {
+          cat: 'Морское право · 12 июня 2026',
+          title: 'Арест морских судов и обеспечение морских требований',
+          body: '<p>Арест морских судов (ship arrest) является наиболее действенным инструментом обеспечения морских требований в соответствии с турецким законодательством и Женевской конвенцией 1999 года.</p>'
+        }
       },
-      'marine-insurance-act-2015-reforms': {
-        kicker: 'LL.M. Academic Thesis · Marine Insurance (English and Welsh Law)',
-        title: 'Pre-Contractual Duties and Warranties under the Insurance Act 2015',
-        content: `
-          <h2>INTRODUCTION</h2>
-          <p>Marine insurance law has developed significantly, particularly regarding pre-contractual duties and warranties under the Insurance Act 2015. This thesis discusses the historical framework of the Marine Insurance Act 1906 (MIA 1906) and the statutory shift toward proportionate remedies and fair risk presentation.</p>
-
-          <h2>PRE-CONTRACTUAL DUTIES: FROM UTMOST GOOD FAITH TO FAIR PRESENTATION</h2>
-          <h3>1. Utmost Good Faith under MIA 1906</h3>
-          <p>Section 17 of the MIA 1906 codified utmost good faith (<em>uberrimae fidei</em>), while Sections 18 and 20 governed non-disclosure and misrepresentation. The sole remedy of avoidance <em>ab initio</em> created severe inequality, allowing insurers to cancel policies for immaterial technical oversights.</p>
-
-          <h3>2. The Duty of Fair Presentation (Insurance Act 2015)</h3>
-          <p>Section 3 of the Insurance Act 2015 replaced passive insurer behavior with an active inquiry standard (s.3(4)(b)). It prohibits "data dumping" under s.3(3)(b) and introduces a proportionate remedies regime under Schedule 1:</p>
-          <ul>
-            <li><strong>Deliberate or Reckless Breaches:</strong> Insurer may avoid the contract and retain premiums (s.8, Sched. 1 cl.2).</li>
-            <li><strong>Innocent or Careless Breaches:</strong> Proportionate reduction of claims or contract reformation based on what the underwriter would have agreed to.</li>
-          </ul>
-
-          <h2>WARRANTIES: ABOLITION OF AUTOMATIC DISCHARGE</h2>
-          <h3>1. Warranties under MIA 1906</h3>
-          <p>Under Section 33(3) of MIA 1906, any breach of warranty discharged the insurer from all liability automatically from the date of the breach, regardless of materiality or remedy (<em>De Hahn v Hartley</em>; <em>Simpson SS Co. v Premier Underwriting</em>).</p>
-
-          <h3>2. Suspension and Risk Mitigation under the 2015 Act</h3>
-          <p>Section 10 of the Insurance Act 2015 abolished automatic discharge. Warranties now operate as <strong>suspensive conditions</strong>: once cured by the assured, liability attaches again. Furthermore, Section 11 prevents insurers from relying on breaches of "risk mitigation terms" if the assured proves the breach could not have increased the risk of the loss that actually occurred.</p>
-
-          <h2>CONCLUSION</h2>
-          <p>The Insurance Act 2015 represents the most comprehensive modernization of English marine insurance law in over a century, establishing equilibrium between assured and insurer while preserving London's commercial preeminence.</p>
-        `
+      'gemiadami-haklari': {
+        tr: {
+          cat: 'Deniz İş Hukuku · 28 Mayıs 2026',
+          title: 'Gemiadamlarının Ücret Güvencesi ve Kanuni Rehin Hakkı',
+          body: '<p>854 sayılı Deniz İş Kanunu\'na tabi çalışan gemiadamlarının ücret, fazla çalışma, kıdem ve ihbar tazminatları özel koruma hükümlerine bağlanmıştır. TTK m. 1320 uyarınca gemiadamlarının alacakları, gemi üzerinde doğrudan "Gemi Alacaklısı Hakkı" ve kanuni rehin doğurur.</p><h3>Öncelikli Tahsilat</h3><p>Bu hak, ipotekli alacaklıların dahi önüne geçerek gemiadamının alacağını geminin paraya çevrilmesi sürecinde ilk sıralardan tahsil etmesine olanak tanır.</p>'
+        },
+        en: {
+          cat: 'Maritime Labour Law · 28 May 2026',
+          title: 'Seafarers\' Wage Protection and Maritime Liens',
+          body: '<p>Under Turkish Maritime Labour Law and Maritime Commercial Code, crew wages and employment claims constitute statutory maritime liens, granting priority over mortgages during ship auction proceeds.</p>'
+        },
+        el: {
+          cat: 'Ναυτεργατικό Δίκαιο · 28 Μαΐου 2026',
+          title: 'Προστασία Μισθών Ναυτικών και Ναυτικά Προνόμια',
+          body: '<p>Οι απαιτήσεις των ναυτικών για δεδουλευμένους μισθούς και αποζημιώσεις απολαμβάνουν ειδικό ναυτικό προνόμιο επί του πλοίου, προηγούμενες ακόμη και των ενυπόθηκων δανειστών.</p>'
+        },
+        ru: {
+          cat: 'Морское трудовое право · 28 мая 2026',
+          title: 'Защита заработной платы моряков и морской залог',
+          body: '<p>Требования членов экипажа по заработной плате и компенсациям обладают статусом привилегированного морского требования и имеют приоритет перед ипотечными кредиторами при реализации судна.</p>'
+        }
+      },
+      'tahliye-taahhut': {
+        tr: {
+          cat: 'Kira Hukuku · 06 Mayıs 2026',
+          title: 'Tahliye Taahhütnamesinin Geçerlilik Koşulları ve İcrası',
+          body: '<p>Türk Borçlar Kanunu (TBK) m. 352 uyarınca tahliye taahhüdü, kiraya verene mahkeme ilamına gerek kalmaksızın doğrudan icra yoluyla taşınmazın tahliyesini isteme hakkı tanır. Ancak taahhüdün kira sözleşmesiyle aynı gün imzalanmamış olması ve açık bir tahliye tarihi içermesi şarttır.</p><h3>İtiraz ve Dava Süreci</h3><p>Kiracının imzaya veya tarihe itiraz etmesi durumunda İcra Hukuk Mahkemesi nezdinde itirazın kaldırılması veya Sulh Hukuk Mahkemesi\'nde tahliye davası açılması gerekir.</p>'
+        },
+        en: {
+          cat: 'Tenancy & Real Estate Law · 06 May 2026',
+          title: 'Eviction Undertakings and Enforcement in Turkish Tenancy Law',
+          body: '<p>Under Turkish Code of Obligations, written eviction undertakings allow landlords to execute eviction orders through enforcement offices provided strict statutory timing requirements are met.</p>'
+        },
+        el: {
+          cat: 'Δίκαιο Μισθώσεων · 06 Μαΐου 2026',
+          title: 'Υπεύθυνη Δήλωση Εκκένωσης και Αναγκαστική Εκτέλεση σε Μισθώσεις',
+          body: '<p>Νομικές προϋποθέσεις εγκυρότητας και εκτέλεσης της έγγραφης δέσμευσης εκκένωσης μισθίου ακινήτου σύμφωνα με το Τουρκικό Ενοχικό Δίκαιο.</p>'
+        },
+        ru: {
+          cat: 'Арендное право · 06 мая 2026',
+          title: 'Обязательство об освобождении помещения и процедура выселения',
+          body: '<p>Условия действительности письменного обязательства арендатора об освобождении недвижимости и порядок принудительного исполнения через службу судебных исполнителей.</p>'
+        }
       }
     };
 
-    // Çok Dilli Arayüz Çevirileri
     const i18n = {
       tr: {
         nav_about: 'Hakkımda', nav_resume: 'Özgeçmiş', nav_practice: 'Çalışma Alanları', nav_articles: 'Yazılar', nav_contact: 'İletişim',
@@ -468,6 +429,7 @@
         timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Uluslararası Deniz Hukuku Yüksek Lisans Programı. Tez: Çarterparti Sözleşmeleri ve Deniz Sigortası Hukuku İncelemeleri.',
         timeline_2_title: 'Koç Üniversitesi — Lisans', timeline_2_desc: 'Hukuk Fakültesi mezuniyeti ve özel hukuk alanındaki temel çalışmalar.',
         timeline_current: 'GÜNCEL', timeline_3_title: 'Avukatlık ve Danışmanlık', timeline_3_desc: 'Deniz ticareti, gemi işlemleri, icra-iflas, kira, iş ve sözleşmeler hukuku alanlarında aktif vekillik ve danışmanlık hizmeti.',
+        
         card_1_label: 'Alan 01', card_1_title: 'Deniz Ticaret Hukuku', card_1_desc: 'Gemi ihtiyati hacizleri (tutuklama), çarterparti, navlun ve yük uyuşmazlıkları ile deniz sigortaları.',
         card_2_label: 'Alan 02', card_2_title: 'Gemi & Yat Alım Satımı', card_2_desc: 'MOA sözleşmeleri, bayrak ve sicil tescil işlemleri, kapanış süreçleri ve hukuki durum tespiti (due diligence).',
         card_3_label: 'Alan 03', card_3_title: 'Deniz İş Hukuku', card_3_desc: '854 sayılı Deniz İş Kanunu kapsamında gemiadamı ücretleri, kıdem/ihbar tazminatları ve gemi alacaklısı hakları.',
@@ -475,6 +437,7 @@
         card_5_label: 'Alan 05', card_5_title: 'Kira Hukuku', card_5_desc: 'Tahliye davaları (taahhüt, ihtiyaç, temerrüt), kira bedeli tespiti ve uyarlama uyuşmazlıkları.',
         card_6_label: 'Alan 06', card_6_title: 'İş Hukuku', card_6_desc: 'İşe iade davaları, kıdem ve ihbar tazminatı, fazla mesai alacakları ve iş sözleşmelerinin tanzimi.',
         card_7_label: 'Alan 07', card_7_title: 'Sözleşmeler Hukuku', card_7_desc: 'Ulusal ve uluslararası ticari sözleşmelerin hazırlanması, müzakeresi, risk analizi ve fesih süreçleri.',
+
         practice_eyebrow: 'Çalışma Alanları', practice_title: 'Uzmanlık ve <em>faaliyet</em> alanları.',
         practice_intro: 'Müvekkil odaklı, uyuşmazlık öncesi koruyucu ve sonrası dava odaklı kapsamlı hukuki danışmanlık.',
         area_1_title: 'Deniz Ticaret Hukuku', area_1_desc: 'Gemi tutuklama/ihtiyati haciz, çarterparti, deniz sigortaları ve yük claims uyuşmazlıkları.',
@@ -484,14 +447,20 @@
         area_5_title: 'Kira Hukuku', area_5_desc: 'Tahliye taahhüdü icrası, ihtiyaç/yeniden imar sebebiyle tahliye, kira tespit ve uyarlama davaları.',
         area_6_title: 'İş Hukuku', area_6_desc: 'İşe iade, kıdem/ihbar tazminatları, mobbing, iş kazası tazminatları ve işçilik alacakları davaları.',
         area_7_title: 'Sözleşmeler Hukuku', area_7_desc: 'Ticari, distribütörlük, franchise ve ortaklık sözleşmelerinin tanzimi ve ihtilaf yönetimi.',
+
+        articles_eyebrow: 'Blog / İncelemeler', articles_title: 'Notlar, kararlar ve <em>hukuki</em> incelemeler.',
+        search_placeholder: 'Başlık veya konu ara', filter_all: 'Tümü', filter_maritime: 'Deniz Hukuku', filter_seafarer: 'Deniz İş', filter_tenancy: 'Kira Hukuku',
+        post_1_title: 'Gemi İhtiyati Haczi ve Deniz Alacaklarının Teminat Altına Alınması', post_1_desc: 'TTK ve 1999 Cenevre Sözleşmesi uyarınca gemi tutuklama şartları ve deniz alacaklarının icrai güvencesi.',
+        post_2_title: 'Gemiadamlarının Ücret Güvencesi ve Kanuni Rehin Hakkı', post_2_desc: '854 sayılı Deniz İş Kanunu kapsamında gemiadamı alacaklarının deniz alacağı niteliği ve gemi üzerindeki imtiyazı.',
+        post_3_title: 'Tahliye Taahhütnamesinin Geçerlilik Koşulları ve İcrası', post_3_desc: 'TBK hükümleri ve Yargıtay içtihatları ışığında tahliye taahhüdünün tanzim zamanı ve icra takibi prosedürü.',
+        read_btn: 'Yazıyı oku', no_results: 'Aramanızla eşleşen bir yazı bulunamadı.',
         contact_eyebrow: 'İletişim ve Ulaşılabilirlik', contact_title: 'İletişim için sade ve <em>açık</em> bir kanal.',
         contact_intro: 'İlk temas için yazılı iletişim tercih edilir. Danışmanlık ve dava talepleriniz için aşağıdaki kanallardan ulaşabilirsiniz.',
         label_email: 'E-posta', label_phone: 'Telefon', label_office: 'Ofis', office_location: 'İstanbul, Türkiye', vcard_btn: 'vCard indir ↓',
         form_title: 'Bir mesaj bırakın.', form_name: 'Ad soyad *', form_email: 'E-posta *', form_subject: 'Konu', form_msg: 'Mesajınız *', form_send: 'Mesajı Gönder',
         form_note: 'Bu form genel bilgilendirme amaçlıdır; avukat-müvekkil ilişkisi oluşturmaz.',
         footer_rights: 'Tüm hakları saklıdır.',
-        footer_legal: 'Bu internet sitesindeki içerik, 1136 sayılı Avukatlık Kanunu, ilgili meslek kuralları ve TBB Reklam Yasağı Yönetmeliği gözetilerek genel bilgilendirme amacıyla hazırlanmıştır. İçerik, hukuki danışmanlık niteliği taşımaz.',
-        law_notice: '<strong>Yasal Bilgilendirme:</strong> Bu akademik incelemeler münhasıran İngiliz Hukuku (English and Welsh Law) mevzuatı ve içtihatları çerçevesinde hazırlanmış olup orijinal akademik dilinde (İngilizce) yayımlanmaktadır.'
+        footer_legal: 'Bu internet sitesindeki içerik, 1136 sayılı Avukatlık Kanunu, ilgili meslek kuralları ve TBB Reklam Yasağı Yönetmeliği gözetilerek genel bilgilendirme amacıyla hazırlanmıştır. İçerik, hukuki danışmanlık niteliği taşımaz.'
       },
       en: {
         nav_about: 'About', nav_resume: 'Resume', nav_practice: 'Practice Areas', nav_articles: 'Articles', nav_contact: 'Contact',
@@ -509,6 +478,7 @@
         timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Master of Laws in International Maritime Law. Dissertation on Charterparties and Marine Insurance.',
         timeline_2_title: 'Koç University — LL.B.', timeline_2_desc: 'Faculty of Law graduation with core focus on private and commercial law.',
         timeline_current: 'CURRENT', timeline_3_title: 'Legal Practice & Consultancy', timeline_3_desc: 'Active legal representation in shipping, ship transactions, enforcement, tenancy, labour, and commercial contracts.',
+        
         card_1_label: 'Area 01', card_1_title: 'Maritime Trade Law', card_1_desc: 'Ship arrest (precautionary liens), charterparty disputes, freight, cargo claims, and marine insurance.',
         card_2_label: 'Area 02', card_2_title: 'Ship & Yacht S&P', card_2_desc: 'MOA agreements, flag registration, closing procedures, and legal due diligence.',
         card_3_label: 'Area 03', card_3_title: 'Maritime Labour Law', card_3_desc: 'Seafarer employment contracts, wage recovery, severance/notice pay, and statutory maritime liens.',
@@ -516,6 +486,7 @@
         card_5_label: 'Area 05', card_5_title: 'Tenancy Law', card_5_desc: 'Eviction proceedings (undertaking, default, landlord need), rent determination, and lease adjustment.',
         card_6_label: 'Area 06', card_6_title: 'Labour & Employment Law', card_6_desc: 'Re-employment lawsuits, severance/notice claims, overtime compensation, and employment contracts.',
         card_7_label: 'Area 07', card_7_title: 'Commercial Contracts', card_7_desc: 'Drafting, negotiating, risk analysis, and termination of domestic and international contracts.',
+
         practice_eyebrow: 'Practice Areas', practice_title: 'Areas of <em>expertise</em> and services.',
         practice_intro: 'Client-focused, preventive pre-dispute advisory and robust litigation support.',
         area_1_title: 'Maritime Trade Law', area_1_desc: 'Ship arrest, charterparty breaches, marine insurance, and cargo claims.',
@@ -525,14 +496,20 @@
         area_5_title: 'Tenancy Law', area_5_desc: 'Execution of eviction undertakings, eviction actions, and rent determination.',
         area_6_title: 'Labour & Employment Law', area_6_desc: 'Re-employment claims, severance/notice packages, mobbing, and workplace injury damages.',
         area_7_title: 'Commercial Contracts', area_7_desc: 'Drafting distribution, franchise, partnership agreements, and cross-border transactions.',
+
+        articles_eyebrow: 'Articles & Notes', articles_title: 'Notes, decisions, and <em>academic</em> reviews.',
+        search_placeholder: 'Search title or keyword', filter_all: 'All', filter_maritime: 'Maritime Law', filter_seafarer: 'Maritime Labour', filter_tenancy: 'Tenancy Law',
+        post_1_title: 'Precautionary Ship Arrest and Securing Maritime Claims', post_1_desc: 'Statutory requirements of ship arrest under Turkish Commercial Code and the 1999 Geneva Convention.',
+        post_2_title: 'Seafarers\' Wage Protection and Maritime Liens', post_2_desc: 'Priority of crew wage claims and maritime lien enforcement under Maritime Labour regulations.',
+        post_3_title: 'Eviction Undertakings and Enforcement in Turkish Tenancy Law', post_3_desc: 'Validity requirements and execution procedures of written eviction commitments under Turkish Law.',
+        read_btn: 'Read Article', no_results: 'No matching articles found.',
         contact_eyebrow: 'Contact', contact_title: 'Direct and <em>transparent</em> communication.',
         contact_intro: 'Written correspondence is preferred for initial inquiries. Feel free to get in touch for consultations.',
         label_email: 'Email', label_phone: 'Phone', label_office: 'Office', office_location: 'Istanbul, Turkey', vcard_btn: 'Download vCard ↓',
         form_title: 'Leave a message.', form_name: 'Full Name *', form_email: 'Email Address *', form_subject: 'Subject', form_msg: 'Your Message *', form_send: 'Send Message',
         form_note: 'This form is for informational inquiries and does not constitute formal legal counsel.',
         footer_rights: 'All rights reserved.',
-        footer_legal: 'The content on this website is prepared in compliance with professional standards for general informational purposes only.',
-        law_notice: '<strong>Legal Disclaimer:</strong> These academic dissertations are prepared exclusively under English and Welsh Law and are published in their original language (English).'
+        footer_legal: 'The content on this website is prepared in compliance with the relevant professional regulations for general informational purposes only.'
       },
       el: {
         nav_about: 'Σχετικά', nav_resume: 'Βιογραφικό', nav_practice: 'Τομείς', nav_articles: 'Άρθρα', nav_contact: 'Επικοινωνία',
@@ -550,6 +527,7 @@
         timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Μεταπτυχιακό στο Διεθνές Ναυτικό Δίκαιο. Ειδίκευση σε ναυλοσύμφωνα και ναυτασφαλίσεις.',
         timeline_2_title: 'Koç University — Πτυχίο Νομικής', timeline_2_desc: 'Αποφοίτηση Νομικής με έμφαση στο ιδιωτικό και εμπορικό δίκαιο.',
         timeline_current: 'ΣΗΜΕΡΑ', timeline_3_title: 'Δικηγορική Πρακτική', timeline_3_desc: 'Ναυτικό δίκαιο, αγοραπωλησίες πλοίων, εκτέλεση απαιτήσεων, μισθώσεις και εμπορικές συμβάσεις.',
+        
         card_1_label: 'Τομέας 01', card_1_title: 'Ναυτικό Εμπορικό Δίκαιο', card_1_desc: 'Κατασχέσεις πλοίων, ναυλοσύμφωνα, ναύλοι, ζημίες φορτίου και θαλάσσια ασφάλιση.',
         card_2_label: 'Τομέας 02', card_2_title: 'Αγοραπωλησίες Πλοίων/Σκαφών', card_2_desc: 'Συμβάσεις MOA, νηολόγηση, αλλαγή σημαίας και νομικός έλεγχος (due diligence).',
         card_3_label: 'Τομέας 03', card_3_title: 'Ναυτεργατικό Δίκαιο', card_3_desc: 'Συμβάσεις ναυτολόγησης, δεδουλευμένοι μισθοί, αποζημιώσεις και ναυτικά προνόμια.',
@@ -557,6 +535,7 @@
         card_5_label: 'Τομέας 05', card_5_title: 'Δίκαιο Μισθώσεων', card_5_desc: 'Αγωγές έξωσης (υπεύθυνη δήλωση, ιδιοκατοίκηση), καθορισμός και αναπροσαρμογή μισθώματος.',
         card_6_label: 'Τομέας 06', card_6_title: 'Εργατικό Δίκαιο', card_6_desc: 'Αποζημιώσεις απόλυσης, υπερωρίες, ακυρότητα απόλυσης και συμβάσεις εργασίας.',
         card_7_label: 'Τομέας 07', card_7_title: 'Δίκαιο Συμβάσεων', card_7_desc: 'Σύνταξη, διαπραγμάτευση και ανάλυση κινδύνου εθνικών και διεθνών εμπορικών συμβάσεων.',
+
         practice_eyebrow: 'Τομείς Εξειδίκευσης', practice_title: 'Τομείς <em>δραστηριότητας</em>.',
         practice_intro: 'Ολοκληρωμένη νομική υποστήριξη προσαρμοσμένη στις ανάγκες του εντολέα.',
         area_1_title: 'Ναυτικό Εμπορικό Δίκαιο', area_1_desc: 'Συντηρητική κατάσχεση πλοίων, ναυλοσύμφωνα, απαιτήσεις φορτίου και ναυτασφαλίσεις.',
@@ -566,14 +545,20 @@
         area_5_title: 'Δίκαιο Μισθώσεων', area_5_desc: 'Εκτέλεση δηλώσεων εκκένωσης, αγωγές έξωσης και αναπροσαρμογή ενοικίου.',
         area_6_title: 'Εργατικό Δίκαιο', area_6_desc: 'Εργατικές διαφορές, αποζημιώσεις, mobbing και εργατικά ατυχήματα.',
         area_7_title: 'Δίκαιο Συμβάσεων', area_7_desc: 'Εμπορικές συμβάσεις, συμφωνίες διανομής, franchise και εταιρικές συμφωνίες.',
+
+        articles_eyebrow: 'Άρθρα / Μελέτες', articles_title: 'Νομικές σημειώσεις και <em>αναλύσεις</em>.',
+        search_placeholder: 'Αναζήτηση άρθρου', filter_all: 'Όλα', filter_maritime: 'Ναυτικό Δίκαιο', filter_seafarer: 'Ναυτεργατικά', filter_tenancy: 'Μισθώσεις',
+        post_1_title: 'Συντηρητική Κατάσχεση Πλοίου και Εξασφάλιση Ναυτικών Απαιτήσεων', post_1_desc: 'Προϋποθέσεις κατάσχεσης πλοίου βάσει του Τουρκικού Εμπορικού Κώδικα και της Σύμβασης Γενεύης 1999.',
+        post_2_title: 'Προστασία Μισθών Ναυτικών και Ναυτικά Προνόμια', post_2_desc: 'Προνομιακή ικανοποίηση απαιτήσεων ναυτικών και ναυτικό προνόμιο επί του πλοίου.',
+        post_3_title: 'Υπεύθυνη Δήλωση Εκκένωσης και Αναγκαστική Εκτέλεση σε Μισθώσεις', post_3_desc: 'Νομικές προϋποθέσεις και διαδικασία αναγκαστικής έξωσης μισθωτή κατά το Τουρκικό Δίκαιο.',
+        read_btn: 'Ανάγνωση', no_results: 'Δεν βρέθηκαν αποτελέσματα.',
         contact_eyebrow: 'Επικοινωνία', contact_title: 'Άμεση και <em>σαφής</em> επικοινωνία.',
         contact_intro: 'Για αιτήματα παροχής συμβουλών μπορείτε να επικοινωνήσετε μέσω των παρακάτω στοιχείων.',
         label_email: 'Email', label_phone: 'Τηλέφωνο', label_office: 'Γραφείο', office_location: 'Κωνσταντινούπολη, Τουρκία', vcard_btn: 'Λήψη vCard ↓',
         form_title: 'Αφήστε ένα μήνυμα.', form_name: 'Ονοματεπώνυμο *', form_email: 'Email *', form_subject: 'Θέμα', form_msg: 'Το μήνυμά σας *', form_send: 'Αποστολή Μηνύματος',
         form_note: 'Η παρούσα φόρμα δεν δημιουργεί σχέση εντολέα-δικηγόρου.',
         footer_rights: 'Όλα τα δικαιώματα διατηρούνται.',
-        footer_legal: 'Το περιεχόμενο της ιστοσελίδας παρέχεται για γενική πληροφόρηση.',
-        law_notice: '<strong>Νομική Σημείωση:</strong> Οι παρούσες ακαδημαϊκές μελέτες έχουν συνταχθεί αποκλειστικά υπό το Αγγλικό Δίκαιο (English and Welsh Law) και δημοσιεύονται στην πρωτότυπη αγγλική γλώσσα.'
+        footer_legal: 'Το περιεχόμενο της ιστοσελίδας παρέχεται για γενική πληροφόρηση.'
       },
       ru: {
         nav_about: 'Обо мне', nav_resume: 'Резюме', nav_practice: 'Практика', nav_articles: 'Статьи', nav_contact: 'Контакты',
@@ -591,6 +576,7 @@
         timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Магистр международного морского права. Исследования договоров фрахтования и страхования.',
         timeline_2_title: 'Koç University — Бакалавр', timeline_2_desc: 'Юридический факультет, специализация на частном праве.',
         timeline_current: 'НАСТОЯЩЕЕ ВРЕМЯ', timeline_3_title: 'Адвокатская деятельность', timeline_3_desc: 'Морское право, сделки с судами, исполнительное производство, арендные, трудовые и контрактные споры.',
+        
         card_1_label: 'Сфера 01', card_1_title: 'Морское торговое право', card_1_desc: 'Арест судов, чартерные споры, фрахт, претензии по грузу и морское страхование.',
         card_2_label: 'Сфера 02', card_2_title: 'Купля-продажа судов и яхт', card_2_desc: 'Договоры MOA, регистрация флага и реестра, закрытие сделок и due diligence.',
         card_3_label: 'Сфера 03', card_3_title: 'Морское трудовое право', card_3_desc: 'Трудовые договоры моряков, задолженность по зарплате, выходные пособия и морской залог.',
@@ -598,6 +584,7 @@
         card_5_label: 'Сфера 05', card_5_title: 'Арендное право', card_5_desc: 'Выселение арендаторов (обязательство, неуплата), определение и пересмотр арендной платы.',
         card_6_label: 'Сфера 06', card_6_title: 'Трудовое право', card_6_desc: 'Восстановление на работе, выходные пособия, компенсации, моббинг и трудовые договоры.',
         card_7_label: 'Сфера 07', card_7_title: 'Договорное право', card_7_desc: 'Составление, аудит рисков и расторжение национальных и международных коммерческих контрактов.',
+
         practice_eyebrow: 'Сферы практики', practice_title: 'Ключевые направления <em>деятельности</em>.',
         practice_intro: 'Комплексная юридическая защита интересов клиентов.',
         area_1_title: 'Морское торговое право', area_1_desc: 'Арест судов, чартер-партии, претензии по грузам и споры по страхованию.',
@@ -607,14 +594,20 @@
         area_5_title: 'Арендное право', area_5_desc: 'Принудительное выселение арендаторов, споры по арендной плате.',
         area_6_title: 'Трудовое право', area_6_desc: 'Трудовые споры, взыскание компенсаций, несчастные случаи на производстве.',
         area_7_title: 'Договорное право', area_7_desc: 'Дистрибьюторские, франчайзинговые и партнерские соглашения.',
+
+        articles_eyebrow: 'Блог / Аналитика', articles_title: 'Правовые заметки и <em>анализ</em>.',
+        search_placeholder: 'Поиск статей', filter_all: 'Все', filter_maritime: 'Морское право', filter_seafarer: 'Морской труд', filter_tenancy: 'Аренда',
+        post_1_title: 'Арест морских судов и обеспечение морских требований', post_1_desc: 'Условия наложения ареста на суда в соответствии с ТТК Турции и Женевской конвенцией 1999 года.',
+        post_2_title: 'Защита заработной платы моряков и морской залог', post_2_desc: 'Привилегированный статус требований экипажа и порядок принудительного взыскания.',
+        post_3_title: 'Обязательство об освобождении помещения и процедура выселения', post_3_desc: 'Условия действительности обязательства об освобождении и порядок исполнения по закону Турции.',
+        read_btn: 'Читать', no_results: 'Ничего не найдено.',
         contact_eyebrow: 'Контакты', contact_title: 'Прямой и <em>открытый</em> канал связи.',
         contact_intro: 'Для первичных обращений рекомендуется письменная связь.',
         label_email: 'Эл. почта', label_phone: 'Телефон', label_office: 'Офис', office_location: 'Стамбул, Турция', vcard_btn: 'Скачать vCard ↓',
         form_title: 'Оставить сообщение.', form_name: 'ФИО *', form_email: 'Эл. почта *', form_subject: 'Тема', form_msg: 'Ваше сообщение *', form_send: 'Отправить сообщение',
         form_note: 'Форма носит информационный характер и не создает отношений адвокат-клиент.',
         footer_rights: 'Все права защищены.',
-        footer_legal: 'Информация на сайте носит исключительно ознакомительный характер.',
-        law_notice: '<strong>Правовое уведомление:</strong> Данные научные исследования подготовлены исключительно по праву Англии и Уэльса (English and Welsh Law) и опубликованы на языке оригинала (английском).'
+        footer_legal: 'Информация на сайте носит исключительно ознакомительный характер.'
       }
     };
 
@@ -637,12 +630,10 @@
         if (t[key]) el.innerHTML = t[key];
       });
 
-      // Banner Uyarısını seçilen dilde güncelle
-      const banner = document.getElementById('english-law-banner');
-      if (banner && t.law_notice) banner.innerHTML = t.law_notice;
-
-      const modalNotice = document.getElementById('modal-law-notice');
-      if (modalNotice && t.law_notice) modalNotice.innerHTML = t.law_notice;
+      document.querySelectorAll('[data-placeholder-i18n]').forEach(el => {
+        const key = el.getAttribute('data-placeholder-i18n');
+        if (t[key]) el.placeholder = t[key];
+      });
     }
 
     const savedLang = localStorage.getItem('site_lang') || 'tr';
@@ -679,47 +670,67 @@
       }));
     }
 
-    // URL YÖNLENDİRMELİ MAKALE / TEZ SİSTEMİ
+    // Modal
     const modalEl = document.getElementById('article-modal');
     const modalKicker = document.getElementById('modal-kicker');
     const modalTitle = document.getElementById('modal-title');
     const modalBody = document.getElementById('modal-body');
     const modalClose = document.getElementById('modal-close');
 
-    function openArticle(key) {
-      const art = academicDissertations[key];
-      if (art && modalEl) {
-        modalKicker.textContent = art.kicker;
-        modalTitle.textContent = art.title;
-        modalBody.innerHTML = art.content;
-        modalEl.classList.add('open');
-        document.body.classList.add('no-scroll');
-      }
-    }
+    document.querySelectorAll('[data-article]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const artKey = btn.getAttribute('data-article');
+        const curL = localStorage.getItem('site_lang') || 'tr';
+        const doc = articlesData[artKey] ? (articlesData[artKey][curL] || articlesData[artKey]['tr']) : null;
+        if (doc && modalEl) {
+          modalKicker.textContent = doc.cat;
+          modalTitle.textContent = doc.title;
+          modalBody.innerHTML = doc.body;
+          modalEl.classList.add('open');
+          document.body.classList.add('no-scroll');
+        }
+      });
+    });
 
     function closeModal() {
       if (modalEl) {
         modalEl.classList.remove('open');
         document.body.classList.remove('no-scroll');
-        if (window.location.hash.startsWith('#article/')) {
-          history.pushState("", document.title, window.location.pathname + window.location.search);
-        }
       }
     }
-
     modalClose?.addEventListener('click', closeModal);
     modalEl?.addEventListener('click', e => { if (e.target === modalEl) closeModal(); });
 
-    // Hash Değişimiyle Makale Açma
-    function handleHashChange() {
-      const hash = window.location.hash;
-      if (hash.startsWith('#article/')) {
-        const key = hash.replace('#article/', '');
-        openArticle(key);
-      }
+    // Filtreleme ve Arama
+    const searchInp = document.getElementById('article-search');
+    const filterBtns = document.querySelectorAll('[data-filter]');
+    const cards = document.querySelectorAll('.article-card');
+    const noRes = document.getElementById('no-results');
+    let currentFilter = 'Tümü';
+
+    function runFilter() {
+      const q = searchInp.value.trim().toLocaleLowerCase('tr-TR');
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const matchCat = currentFilter === 'Tümü' || cat === currentFilter;
+        const matchText = !q || card.textContent.toLocaleLowerCase('tr-TR').includes(q);
+        const show = matchCat && matchText;
+        card.style.display = show ? 'flex' : 'none';
+        if (show) visibleCount++;
+      });
+      if (noRes) noRes.style.display = visibleCount === 0 ? 'block' : 'none';
     }
-    window.addEventListener('hashchange', handleHashChange);
-    window.addEventListener('load', handleHashChange);
+
+    searchInp?.addEventListener('input', runFilter);
+    filterBtns.forEach(b => {
+      b.addEventListener('click', () => {
+        filterBtns.forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        currentFilter = b.getAttribute('data-filter');
+        runFilter();
+      });
+    });
 
     // Form Gönderimi
     const formEl = document.getElementById('contact-form');
