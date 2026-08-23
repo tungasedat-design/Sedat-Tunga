@@ -69,6 +69,14 @@
     body.dark .credential-list-7 .credential {
       background: var(--paper);
     }
+
+    /* KESİN GÖRÜNÜR MODAL DÜZELTMESİ */
+    #article-modal.is-visible {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: 999999 !important;
+    }
   </style>
 </head>
 <body>
@@ -93,7 +101,6 @@
       </nav>
       
       <div class="nav-actions">
-        <!-- Dil Değiştirici: Yalnızca TR ve EN -->
         <div class="lang-switcher">
           <button type="button" class="lang-btn active" id="btn-tr" onclick="changeSiteLanguage('tr')" title="Türkçe">
             <img src="https://flagcdn.com/w40/tr.png" alt="Türkçe">
@@ -258,21 +265,21 @@
             <div class="article-meta"><span data-i18n="filter_maritime">Deniz Hukuku</span><time datetime="2026-06-12">12.06.2026</time></div>
             <h3 data-i18n="post_1_title">Gemi İhtiyati Haczi ve Deniz Alacaklarının Teminat Altına Alınması</h3>
             <p data-i18n="post_1_desc">TTK ve 1999 Cenevre Sözleşmesi uyarınca gemi tutuklama şartları ve deniz alacaklarının icrai güvencesi.</p>
-            <a class="article-link" href="#makale/deniz-haciz" onclick="openArticleRoute('deniz-haciz', event)"><span data-i18n="read_btn">Yazıyı oku</span> →</a>
+            <button type="button" class="article-link" onclick="openArticleByKey('deniz-haciz')"><span data-i18n="read_btn">Yazıyı oku</span> →</button>
           </article>
           
           <article class="article-card" data-category="Deniz İş Hukuku">
             <div class="article-meta"><span data-i18n="filter_seafarer">Deniz İş Hukuku</span><time datetime="2026-05-28">28.05.2026</time></div>
             <h3 data-i18n="post_2_title">Gemiadamlarının Ücret Güvencesi ve Kanuni Rehin Hakkı</h3>
             <p data-i18n="post_2_desc">854 sayılı Deniz İş Kanunu kapsamında gemiadamı alacaklarının deniz alacağı niteliği ve gemi üzerindeki imtiyazı.</p>
-            <a class="article-link" href="#makale/gemiadami-haklari" onclick="openArticleRoute('gemiadami-haklari', event)"><span data-i18n="read_btn">Yazıyı oku</span> →</a>
+            <button type="button" class="article-link" onclick="openArticleByKey('gemiadami-haklari')"><span data-i18n="read_btn">Yazıyı oku</span> →</button>
           </article>
           
           <article class="article-card" data-category="Kira Hukuku">
             <div class="article-meta"><span data-i18n="filter_tenancy">Kira Hukuku</span><time datetime="2026-05-06">06.05.2026</time></div>
             <h3 data-i18n="post_3_title">Tahliye Taahhütnamesinin Geçerlilik Koşulları ve İcrası</h3>
             <p data-i18n="post_3_desc">TBK hükümleri ve Yargıtay içtihatları ışığında tahliye taahhüdünün tanzim zamanı ve icra takibi prosedürü.</p>
-            <a class="article-link" href="#makale/tahliye-taahhut" onclick="openArticleRoute('tahliye-taahhut', event)"><span data-i18n="read_btn">Yazıyı oku</span> →</a>
+            <button type="button" class="article-link" onclick="openArticleByKey('tahliye-taahhut')"><span data-i18n="read_btn">Yazıyı oku</span> →</button>
           </article>
         </div>
         <p class="no-results" id="no-results" data-i18n="no_results">Aramanızla eşleşen bir yazı bulunamadı.</p>
@@ -500,7 +507,7 @@
         if (t[key]) el.placeholder = t[key];
       });
 
-      if (currentActiveArticle && modalEl && modalEl.classList.contains('open')) {
+      if (currentActiveArticle && modalEl && modalEl.classList.contains('is-visible')) {
         renderModalArticle(currentActiveArticle, lang);
       }
     }
@@ -539,7 +546,7 @@
       }));
     }
 
-    // Modal & Dinamik URL Yönetimi
+    // Modal & Dinamik URL Yönetimi (Kesin Açılma Garantisi)
     const modalEl = document.getElementById('article-modal');
     const modalKicker = document.getElementById('modal-kicker');
     const modalTitle = document.getElementById('modal-title');
@@ -553,25 +560,26 @@
         modalKicker.textContent = doc.cat;
         modalTitle.textContent = doc.title;
         modalBody.innerHTML = doc.body;
+        modalEl.classList.add('is-visible');
         modalEl.classList.add('open');
         document.body.classList.add('no-scroll');
       }
     }
 
-    function openArticleRoute(artKey, e) {
-      if (e) e.preventDefault();
+    function openArticleByKey(artKey) {
       currentActiveArticle = artKey;
-      window.location.hash = '#makale/' + artKey;
+      window.location.hash = 'makale/' + artKey;
       const curL = localStorage.getItem('site_lang') || 'tr';
       renderModalArticle(artKey, curL);
     }
 
     function closeModal() {
       if (modalEl) {
+        modalEl.classList.remove('is-visible');
         modalEl.classList.remove('open');
         document.body.classList.remove('no-scroll');
         currentActiveArticle = null;
-        if (window.location.hash.startsWith('#makale/')) {
+        if (window.location.hash.includes('makale/')) {
           history.pushState("", document.title, window.location.pathname + window.location.search);
         }
       }
@@ -582,8 +590,8 @@
 
     function checkHashRoute() {
       const hash = window.location.hash;
-      if (hash.startsWith('#makale/')) {
-        const artKey = hash.replace('#makale/', '');
+      if (hash.includes('makale/')) {
+        const artKey = hash.split('makale/')[1];
         if (articlesData[artKey]) {
           currentActiveArticle = artKey;
           const curL = localStorage.getItem('site_lang') || 'tr';
@@ -594,7 +602,8 @@
 
     window.addEventListener('hashchange', () => {
       const hash = window.location.hash;
-      if (!hash.startsWith('#makale/') && modalEl.classList.contains('open')) {
+      if (!hash.includes('makale/') && modalEl.classList.contains('is-visible')) {
+        modalEl.classList.remove('is-visible');
         modalEl.classList.remove('open');
         document.body.classList.remove('no-scroll');
         currentActiveArticle = null;
