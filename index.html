@@ -1,35 +1,137 @@
-# ROL VE AMAÇ
-Sen, kodlama bilmeyen bir hukukçu/yazar için çalışan kıdemli bir Web Geliştirici ve Site Yöneticisisin. 
-Kullanıcının teknik kodlama bilgisi sıfırdır; siteyi GitHub arayüzü (web editörü veya repository) üzerinden dosya güncelleyerek yönetmektedir.
-Temel görevin: Kullanıcıya asla "kod yaz", "terminal aç", "şu mantığı uygula" demeden; tam olarak hangi dosyaya gideceğini, nereyi sileceğini ve yerine tam olarak neyi yapıştıracağını (Copy-Paste) adım adım göstermektir.
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Av. Sedat Tunga | Deniz Ticareti Hukuku & Danışmanlık</title>
+    <meta name="description" content="Av. Sedat Tunga resmi web sitesi. Deniz Ticareti Hukuku, Gemi Alım-Satım ve Uluslararası Ticaret Hukuku Danışmanlığı.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="sedat-tunga-imza.png">
+    
+    <!-- CSS & Fonts -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-title">AV. SEDAT TUNGA</span>
+                <span class="logo-subtitle" data-i18n="nav.subtitle">DENİZ TİCARETİ HUKUKU & DANIŞMANLIK</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#about" data-i18n="nav.about">Hakkında</a></li>
+                    <li><a href="#expertise" data-i18n="nav.expertise">Uzmanlık Alanları</a></li>
+                    <li><a href="#publications" data-i18n="nav.publications">Yayınlar & Çalışmalar</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">İletişim</a></li>
+                </ul>
+                <div class="lang-selector">
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <span class="lang-divider">/</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-# TEMEL ÇALIŞMA KURALLARI
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero.title">Deniz Ticareti & Uluslararası Taşımacılık Hukuku</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Küresel denizcilik sektöründe hukuki kesinlik, stratejik uyuşmazlık çözümü ve kapsamlı danışmanlık.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">İletişime Geçin</a>
+                <a href="#expertise" class="btn btn-secondary" data-i18n="hero.secondary">Uzmanlık Alanları</a>
+            </div>
+        </div>
+    </section>
 
-1. **Sıfır Kodlama Beklentisi:**
-   - Asla varsayımlar üzerinden konuşma ("X değişkenini tanımla", "CSS class'ı ekle" gibi teknik emirler verme).
-   - Kullanıcıya sadece hazır, eksiksiz ve test edilmiş kod blokları ver.
+    <!-- About Section -->
+    <section id="about" class="section-container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="about.title">Hakkında</h2>
+            <div class="title-bar"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p data-i18n="about.p1">
+                    Av. Sedat Tunga, deniz ticareti hukuku, uluslararası taşımacılık, gemi finansmanı ve deniz sigortaları alanında uzmanlaşmış bir avukattır.
+                </p>
+                <p data-i18n="about.p2">
+                    Yerli ve yabancı armatörler, P&I kulüpleri, lojistik firmaları ve denizcilik paydaşlarına önleyici hukuki danışmanlık, sözleşme hazırlığı ve uyuşmazlık çözümü süreçlerinde hizmet sunmaktadır.
+                </p>
+            </div>
+        </div>
+    </section>
 
-2. **GitHub Arayüzü Odaklı Adım Adım Yönlendirme:**
-   Her değişiklik talebinde şu şablonu eksiksiz uygula:
-   - **Hedef Dosya:** Değişikliğin yapılacağı dosyanın GitHub reposundaki tam yolu (Örn: `src/components/Header.jsx` veya `content/posts/makale-1.md`).
-   - **Ne Yapılacak:** 1-2 cümleyle dosyanın neresine gidileceği (Örn: "En alta ekleyin", "45. satırdaki eski bloğu silin").
-   - **Kopyalanacak Kod:** Kullanıcının doğrudan kopyalayabileceği, eksiksiz, parça parça olmayan tam kod bloğu.
+    <!-- Expertise Section -->
+    <section id="expertise" class="section-container bg-alt">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="expertise.title">Uzmanlık Alanları</h2>
+            <div class="title-bar"></div>
+        </div>
+        <div class="expertise-grid">
+            <div class="card">
+                <h3 data-i18n="expertise.card1.title">Deniz Ticareti Hukuku</h3>
+                <p data-i18n="expertise.card1.desc">Çarter sözleşmeleri, konişmento uyuşmazlıkları, yük hasarları, çatma, kurtarma-yardım ve müşterek avarya süreçlerinin yönetimi.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="expertise.card2.title">Gemi Alım-Satım & Finansmanı</h3>
+                <p data-i18n="expertise.card2.desc">Gemi alım-satım (S&P) sözleşmeleri, bayrak ve sicil tescil işlemleri, gemi ipotekleri ve deniz finansmanı yapılandırmaları.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="expertise.card3.title">Uluslararası Tahkim & Dava</h3>
+                <p data-i18n="expertise.card3.desc">LMAA ve diğer uluslararası tahkim merkezleri nezdinde denizcilik uyuşmazlıklarının çözümü ve icra-takip süreçleri.</p>
+            </div>
+        </div>
+    </section>
 
-3. **Tam Kod Prensibi:**
-   - Kod bloklarının içine asla `// buraya eski kodlar gelecek`, `...`, `// geri kalan kısım aynı` gibi kısaltmalar koyma.
-   - Değiştirilecek fonksiyonu/bloğu veya gerekiyorsa tüm dosya içeriğini eksiksiz ver ki kullanıcı kopyala-yapıştır yaparken hata almasın.
+    <!-- Publications Section -->
+    <section id="publications" class="section-container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="publications.title">Yayınlar & Çalışmalar</h2>
+            <div class="title-bar"></div>
+        </div>
+        <div class="publications-list">
+            <article class="pub-card">
+                <h3 data-i18n="publications.item1.title">Uluslararası Deniz Taşımacılığında Güncel Hukuki Gelişmeler</h3>
+                <p data-i18n="publications.item1.desc">Küresel tedarik zincirleri ve deniz hukuku alanındaki en son mevzuat ve içtihat analizleri.</p>
+            </article>
+        </div>
+    </section>
 
-4. **Hata & Problem Çözümü:**
-   - Kullanıcı bir hata ekranı, bozuk görünüm veya hata mesajı paylaştığında nedenini teknik terimlerle uzatmadan 1 cümlede açıkla, ardından hemen düzeltilmiş kodu ve yapıştırılacağı dosya yolunu ver.
+    <!-- Contact Section -->
+    <section id="contact" class="section-container bg-alt">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="contact.title">İletişim</h2>
+            <div class="title-bar"></div>
+        </div>
+        <div class="contact-wrapper">
+            <p class="contact-lead" data-i18n="contact.desc">Hukuki danışmanlık ve profesyonel destek için iletişime geçebilirsiniz.</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <strong data-i18n="contact.email_label">E-posta:</strong>
+                    <span>info@sedattunga.av.tr</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-5. **Yeni İçerik (Blog Yazısı) Ekleme Standardı:**
-   - Yeni bir makale/yazı ekleneceği zaman, sitenin kullandığı formata (Markdown frontmatter, JSON metadata, HTML vb.) uygun tam şablonu hazırla. Kullanıcı sadece metni yapıştırıp kaydetsin.
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-signature">
+                <img src="sedat-tunga-imza.png" alt="Av. Sedat Tunga İmza" class="signature-img">
+            </div>
+            <p class="footer-copy">&copy; 2026 Av. Sedat Tunga. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></p>
+        </div>
+    </footer>
 
-# YANIT FORMATI
-Her yanıtta şu yapıyı kullan:
-
-📍 **Gidilecek Dosya:** `dosya/yolu/dosya-adi.uzanti`
-🛠 **İşlem:** (Örn: "Bu dosyadaki mevcut içeriği tamamen silin ve aşağıdaki kodu yapıştırıp 'Commit changes' butonuna basın.")
-📋 **Kopyalanacak Kod:**
-```[dil]
-[Eksiksiz Hazır Kod]
+    <script src="script.js"></script>
+</body>
+</html>
