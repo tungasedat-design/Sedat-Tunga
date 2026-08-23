@@ -53,7 +53,6 @@
       background: rgba(255, 255, 255, 0.15) !important;
     }
     
-    /* 7 ALAN İÇİN GELİŞMİŞ GRID */
     .credential-list-7 {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -184,7 +183,6 @@
           </article>
         </div>
         
-        <!-- 7 AYRI ALAN KARTI -->
         <div class="credential-list-7">
           <article class="credential">
             <span class="tiny-label" data-i18n="card_1_label">Alan 01</span>
@@ -225,7 +223,7 @@
       </div>
     </section>
 
-    <!-- ÇALIŞMA ALANLARI (7 ALAN LİSTESİ) -->
+    <!-- ÇALIŞMA ALANLARI -->
     <section class="section" id="alanlar">
       <div class="shell areas-layout">
         <div>
@@ -245,7 +243,7 @@
       </div>
     </section>
 
-    <!-- BLOG / YAZILAR -->
+    <!-- BLOG / YAZILAR (HER MAKALENİN KENDİNE ÖZEL URL'Sİ BULUNMAKTADIR) -->
     <section class="section section-soft" id="yazilar">
       <div class="shell">
         <div class="blog-head">
@@ -265,21 +263,21 @@
             <div class="article-meta"><span data-i18n="filter_maritime">Deniz Hukuku</span><time datetime="2026-06-12">12.06.2026</time></div>
             <h3 data-i18n="post_1_title">Gemi İhtiyati Haczi ve Deniz Alacaklarının Teminat Altına Alınması</h3>
             <p data-i18n="post_1_desc">TTK ve 1999 Cenevre Sözleşmesi uyarınca gemi tutuklama şartları ve deniz alacaklarının icrai güvencesi.</p>
-            <button class="article-link" type="button" data-article="deniz-haciz" data-i18n="read_btn">Yazıyı oku</button>
+            <a class="article-link" href="#makale/deniz-haciz" data-article="deniz-haciz" data-i18n="read_btn">Yazıyı oku</a>
           </article>
           
           <article class="article-card" data-category="Deniz İş Hukuku">
             <div class="article-meta"><span data-i18n="filter_seafarer">Deniz İş Hukuku</span><time datetime="2026-05-28">28.05.2026</time></div>
             <h3 data-i18n="post_2_title">Gemiadamlarının Ücret Güvencesi ve Kanuni Rehin Hakkı</h3>
             <p data-i18n="post_2_desc">854 sayılı Deniz İş Kanunu kapsamında gemiadamı alacaklarının deniz alacağı niteliği ve gemi üzerindeki imtiyazı.</p>
-            <button class="article-link" type="button" data-article="gemiadami-haklari" data-i18n="read_btn">Yazıyı oku</button>
+            <a class="article-link" href="#makale/gemiadami-haklari" data-article="gemiadami-haklari" data-i18n="read_btn">Yazıyı oku</a>
           </article>
           
           <article class="article-card" data-category="Kira Hukuku">
             <div class="article-meta"><span data-i18n="filter_tenancy">Kira Hukuku</span><time datetime="2026-05-06">06.05.2026</time></div>
             <h3 data-i18n="post_3_title">Tahliye Taahhütnamesinin Geçerlilik Koşulları ve İcrası</h3>
             <p data-i18n="post_3_desc">TBK hükümleri ve Yargıtay içtihatları ışığında tahliye taahhüdünün tanzim zamanı ve icra takibi prosedürü.</p>
-            <button class="article-link" type="button" data-article="tahliye-taahhut" data-i18n="read_btn">Yazıyı oku</button>
+            <a class="article-link" href="#makale/tahliye-taahhut" data-article="tahliye-taahhut" data-i18n="read_btn">Yazıyı oku</a>
           </article>
         </div>
         <p class="no-results" id="no-results" data-i18n="no_results">Aramanızla eşleşen bir yazı bulunamadı.</p>
@@ -603,7 +601,7 @@
         read_btn: 'Читать', no_results: 'Ничего не найдено.',
         contact_eyebrow: 'Контакты', contact_title: 'Прямой и <em>открытый</em> канал связи.',
         contact_intro: 'Для первичных обращений рекомендуется письменная связь.',
-        label_email: 'Эл. почта', label_phone: 'Телефон', label_office: 'Офис', office_location: 'Стамбул, Турция', vcard_btn: 'Скачать vCard ↓',
+        label_email: 'Эл. почta', label_phone: 'Телефон', label_office: 'Офис', office_location: 'Стамбул, Турция', vcard_btn: 'Скачать vCard ↓',
         form_title: 'Оставить сообщение.', form_name: 'ФИО *', form_email: 'Эл. почта *', form_subject: 'Тема', form_msg: 'Ваше сообщение *', form_send: 'Отправить сообщение',
         form_note: 'Форма носит информационный характер и не создает отношений адвокат-клиент.',
         footer_rights: 'Все права защищены.',
@@ -634,6 +632,11 @@
         const key = el.getAttribute('data-placeholder-i18n');
         if (t[key]) el.placeholder = t[key];
       });
+
+      // Eğer modal açıksa içindeki metni de güncel dilde tazele
+      if (currentActiveArticle && modalEl && modalEl.classList.contains('open')) {
+        renderModalArticle(currentActiveArticle, lang);
+      }
     }
 
     const savedLang = localStorage.getItem('site_lang') || 'tr';
@@ -670,36 +673,62 @@
       }));
     }
 
-    // Modal
+    // Modal & Dinamik URL (#makale/...) Yönetimi
     const modalEl = document.getElementById('article-modal');
     const modalKicker = document.getElementById('modal-kicker');
     const modalTitle = document.getElementById('modal-title');
     const modalBody = document.getElementById('modal-body');
     const modalClose = document.getElementById('modal-close');
+    let currentActiveArticle = null;
 
-    document.querySelectorAll('[data-article]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const artKey = btn.getAttribute('data-article');
-        const curL = localStorage.getItem('site_lang') || 'tr';
-        const doc = articlesData[artKey] ? (articlesData[artKey][curL] || articlesData[artKey]['tr']) : null;
-        if (doc && modalEl) {
-          modalKicker.textContent = doc.cat;
-          modalTitle.textContent = doc.title;
-          modalBody.innerHTML = doc.body;
-          modalEl.classList.add('open');
-          document.body.classList.add('no-scroll');
-        }
-      });
-    });
+    function renderModalArticle(artKey, lang) {
+      const doc = articlesData[artKey] ? (articlesData[artKey][lang] || articlesData[artKey]['tr']) : null;
+      if (doc && modalEl) {
+        modalKicker.textContent = doc.cat;
+        modalTitle.textContent = doc.title;
+        modalBody.innerHTML = doc.body;
+        modalEl.classList.add('open');
+        document.body.classList.add('no-scroll');
+      }
+    }
+
+    function openArticleByKey(artKey) {
+      currentActiveArticle = artKey;
+      const curL = localStorage.getItem('site_lang') || 'tr';
+      renderModalArticle(artKey, curL);
+    }
 
     function closeModal() {
       if (modalEl) {
         modalEl.classList.remove('open');
         document.body.classList.remove('no-scroll');
+        currentActiveArticle = null;
+        if (window.location.hash.startsWith('#makale/')) {
+          history.pushState("", document.title, window.location.pathname + window.location.search);
+        }
       }
     }
+
     modalClose?.addEventListener('click', closeModal);
     modalEl?.addEventListener('click', e => { if (e.target === modalEl) closeModal(); });
+
+    // URL Hash Takibi (Doğrudan Linkle Giriş & Geri Tuşu Desteği)
+    function handleHashRoute() {
+      const hash = window.location.hash;
+      if (hash.startsWith('#makale/')) {
+        const artKey = hash.replace('#makale/', '');
+        if (articlesData[artKey]) {
+          openArticleByKey(artKey);
+        }
+      } else if (modalEl && modalEl.classList.contains('open')) {
+        modalEl.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+        currentActiveArticle = null;
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashRoute);
+    window.addEventListener('load', handleHashRoute);
 
     // Filtreleme ve Arama
     const searchInp = document.getElementById('article-search');
