@@ -3,17 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Av. Sedat Tunga'nın deniz hukuku, icra hukuku, akademik incelemeler ve blog platformu." />
+  <meta name="description" content="Av. Sedat Tunga - Deniz Hukuku, İcra Hukuku ve Uluslararası Hukuki Danışmanlık" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1E314A" />
   <link rel="canonical" href="https://www.sedattunga.av.tr/" />
   <link rel="icon" type="image/png" href="sedat-tunga-imza.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="tr_TR" />
-  <meta property="og:site_name" content="Av. Sedat Tunga" />
-  <meta property="og:title" content="Av. Sedat Tunga | Hukuk, Akademik İncelemeler ve Blog" />
-  <meta property="og:description" content="Hukuki meseleleri bağlamı içinde okumak." />
-  <meta property="og:url" content="https://www.sedattunga.av.tr/" />
   <title>Av. Sedat Tunga | Hukuk, Akademik İncelemeler ve Blog</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,163 +20,188 @@
     <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
     <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
   </svg>
-  <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+  
   <header class="site-header">
     <div class="shell nav-wrap">
-      <a class="brand" href="#ana-sayfa" aria-label="Av. Sedat Tunga ana sayfa">
+      <a class="brand" href="#ana-sayfa" aria-label="Av. Sedat Tunga">
         <img class="brand-signature" src="sedat-tunga-imza.png" alt="Av. Sedat Tunga" style="height: 2.4rem; width: auto; object-fit: contain;" />
       </a>
-      <nav class="desktop-nav" aria-label="Ana menü"><a href="#hakkimda">Hakkımda</a><a href="#ozgecmis">Özgeçmiş</a><a href="#alanlar">Çalışma Alanları</a><a href="#yazilar">Yazılar</a><a href="#iletisim">İletişim</a></nav>
-      <div class="nav-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="icon"><use href="#moon"></use></svg></button><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-panel"><svg class="icon"><use href="#menu"></use></svg></button></div>
+      <nav class="desktop-nav" aria-label="Ana menü">
+        <a href="#hakkimda" data-i18n="nav_about">Hakkımda</a>
+        <a href="#ozgecmis" data-i18n="nav_resume">Özgeçmiş</a>
+        <a href="#alanlar" data-i18n="nav_practice">Çalışma Alanları</a>
+        <a href="#yazilar" data-i18n="nav_articles">Yazılar</a>
+        <a href="#iletisim" data-i18n="nav_contact">İletişim</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <!-- Dil Değiştirme Bayrakları -->
+        <div class="lang-switcher" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="tr" title="Türkçe">🇹🇷</button>
+          <button type="button" class="lang-btn" data-lang="en" title="English">🇬🇧</button>
+          <button type="button" class="lang-btn" data-lang="el" title="Ελληνικά">🇬🇷</button>
+          <button type="button" class="lang-btn" data-lang="ru" title="Русский">🇷🇺</button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="icon"><use href="#moon"></use></svg></button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-panel"><svg class="icon"><use href="#menu"></use></svg></button>
+      </div>
     </div>
-    <nav class="mobile-panel shell" id="mobile-panel" aria-label="Mobil menü"><a href="#hakkimda">Hakkımda</a><a href="#ozgecmis">Özgeçmiş</a><a href="#alanlar">Çalışma Alanları</a><a href="#yazilar">Yazılar</a><a href="#iletisim">İletişim</a></nav>
+    
+    <nav class="mobile-panel shell" id="mobile-panel" aria-label="Mobil menü">
+      <a href="#hakkimda" data-i18n="nav_about">Hakkımda</a>
+      <a href="#ozgecmis" data-i18n="nav_resume">Özgeçmiş</a>
+      <a href="#alanlar" data-i18n="nav_practice">Çalışma Alanları</a>
+      <a href="#yazilar" data-i18n="nav_articles">Yazılar</a>
+      <a href="#iletisim" data-i18n="nav_contact">İletişim</a>
+    </nav>
   </header>
+
   <main id="main-content">
-    <section class="hero" id="ana-sayfa" aria-labelledby="hero-title">
+    <section class="hero" id="ana-sayfa">
       <div class="shell hero-grid" style="grid-template-columns: 1fr; min-height: 28rem; padding: 5rem 0 3rem;">
         <div class="hero-content" style="max-width: 54rem;">
-          <p class="eyebrow">Hukuk · Akademik İncelemeler · Blog</p>
-          <h1 id="hero-title" style="font-size: clamp(3rem, 6.5vw, 5.5rem);">Hukuki meseleleri <span>bağlamı</span> içinde okumak.</h1>
-          <p class="hero-lede">Av. Sedat Tunga'nın deniz hukuku, icra takipleri ve uyuşmazlık çözümü odağındaki mesleki ve akademik inceleme notları.</p>
+          <p class="eyebrow" data-i18n="hero_eyebrow">Hukuk · Akademik İncelemeler · Blog</p>
+          <h1 id="hero-title" style="font-size: clamp(3rem, 6.5vw, 5.5rem);" data-i18n="hero_title">Hukuki meseleleri <span>bağlamı</span> içinde okumak.</h1>
+          <p class="hero-lede" data-i18n="hero_desc">Av. Sedat Tunga'nın deniz hukuku, icra takipleri ve uyuşmazlık çözümü odağındaki mesleki ve akademik inceleme notları.</p>
           <div class="button-row">
-            <a class="button" href="#ozgecmis">Özgeçmişi incele <span class="arrow">→</span></a>
-            <a class="button button-outline" href="#yazilar">Yazılara göz at <span class="arrow">→</span></a>
+            <a class="button" href="#ozgecmis"><span data-i18n="hero_btn_resume">Özgeçmişi incele</span> <span class="arrow">→</span></a>
+            <a class="button button-outline" href="#yazilar"><span data-i18n="hero_btn_articles">Yazılara göz at</span> <span class="arrow">→</span></a>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- HAKKIMDA (DÜZELTİLDİ: TEK SÜTUN, TEMİZ VE ŞIK) -->
-    <section class="section" id="hakkimda" aria-labelledby="about-title">
+    <!-- HAKKIMDA -->
+    <section class="section" id="hakkimda">
       <div class="shell" style="max-width: 52rem; margin-inline: auto;">
-        <p class="eyebrow">Hakkımda</p>
-        <h2 class="section-title" id="about-title" style="margin-bottom: 2rem;">Av. Sedat Tunga <em>kimdir?</em></h2>
+        <p class="eyebrow" data-i18n="about_eyebrow">Hakkımda</p>
+        <h2 class="section-title" id="about-title" style="margin-bottom: 2rem;" data-i18n="about_title">Av. Sedat Tunga <em>kimdir?</em></h2>
         <div class="about-text" style="font-size: 1.05rem; line-height: 1.85; max-width: 100%;">
-          <p>Av. Sedat Tunga, 2023 yılında <strong>Koç Üniversitesi Hukuk Fakültesi</strong>'nden mezun olmuştur. Lisans eğitiminin ardından İngiltere'de bulunan <strong>Swansea University</strong> bünyesinde Uluslararası Deniz Hukuku (LL.M.) yüksek lisans programını 2024 yılında tamamlamıştır.</p>
-          <p>Yüksek lisans sürecinde akademik araştırmalarını ve tez çalışmasını özellikle <strong>Çarterparti (Charterparties)</strong> ve <strong>Deniz Sigortası (Marine Insurance)</strong> alanları üzerine yoğunlaştırmıştır.</p>
-          <p>Güncel mesleki pratiğinde başta <strong>Deniz Ticareti Hukuku</strong> ve <strong>İcra ve İflas Hukuku</strong> olmak üzere özel hukukun çeşitli alanlarında aktif olarak avukatlık ve hukuki danışmanlık hizmeti sunmaktadır.</p>
+          <p data-i18n="about_p1">Av. Sedat Tunga, 2023 yılında <strong>Koç Üniversitesi Hukuk Fakültesi</strong>'nden mezun olmuştur. Lisans eğitiminin ardından İngiltere'de bulunan <strong>Swansea University</strong> bünyesinde Uluslararası Deniz Hukuku (LL.M.) yüksek lisans programını 2024 yılında tamamlamıştır.</p>
+          <p data-i18n="about_p2">Yüksek lisans sürecinde akademik araştırmalarını ve tez çalışmasını özellikle <strong>Çarterparti (Charterparties)</strong> ve <strong>Deniz Sigortası (Marine Insurance)</strong> alanları üzerine yoğunlaştırmıştır.</p>
+          <p data-i18n="about_p3">Güncel mesleki pratiğinde başta <strong>Deniz Ticareti Hukuku</strong> ve <strong>İcra ve İflas Hukuku</strong> olmak üzere özel hukukun çeşitli alanlarında aktif olarak avukatlık ve hukuki danışmanlık hizmeti sunmaktadır.</p>
         </div>
         <div class="availability-note" style="margin-top: 2.5rem;">
-          <strong>Not:</strong>
-          <span>Buradaki içerikler genel bilgilendirme niteliğindedir; hukuki danışmanlık veya vekillik ilişkisi kurmaz.</span>
+          <strong data-i18n="disclaimer_label">Not:</strong>
+          <span data-i18n="disclaimer_text">Buradaki içerikler genel bilgilendirme niteliğindedir; hukuki danışmanlık veya vekillik ilişkisi kurmaz.</span>
         </div>
       </div>
     </section>
 
     <!-- ÖZGEÇMİŞ -->
-    <section class="section section-soft" id="ozgecmis" aria-labelledby="resume-title">
+    <section class="section section-soft" id="ozgecmis">
       <div class="shell">
-        <p class="eyebrow">Eğitim ve Deneyim</p>
-        <h2 class="section-title" id="resume-title">Eğitim, uzmanlık ve <em>uygulama</em> geçmişi.</h2>
-        <p class="section-intro">Uluslararası deniz ticareti ve icra hukuku pratiklerini akademik derinlikle birleştiren mesleki kronoloji.</p>
+        <p class="eyebrow" data-i18n="resume_eyebrow">Eğitim ve Deneyim</p>
+        <h2 class="section-title" data-i18n="resume_title">Eğitim, uzmanlık ve <em>uygulama</em> geçmişi.</h2>
+        <p class="section-intro" data-i18n="resume_intro">Uluslararası deniz ticareti ve icra hukuku pratiklerini akademik derinlikle birleştiren mesleki kronoloji.</p>
         <div class="chronology">
           <article class="timeline-item">
             <div class="timeline-year">2024</div>
             <div>
-              <h3>Swansea University — LL.M.</h3>
-              <p>Uluslararası Deniz Hukuku Yüksek Lisans Programı. Tez: Çarterparti Sözleşmeleri ve Deniz Sigortası Hukuku İncelemeleri.</p>
+              <h3 data-i18n="timeline_1_title">Swansea University — LL.M.</h3>
+              <p data-i18n="timeline_1_desc">Uluslararası Deniz Hukuku Yüksek Lisans Programı. Tez: Çarterparti Sözleşmeleri ve Deniz Sigortası Hukuku İncelemeleri.</p>
             </div>
           </article>
           <article class="timeline-item">
             <div class="timeline-year">2023</div>
             <div>
-              <h3>Koç Üniversitesi — Lisans</h3>
-              <p>Hukuk Fakültesi mezuniyeti ve özel hukuk alanındaki temel çalışmalar.</p>
+              <h3 data-i18n="timeline_2_title">Koç Üniversitesi — Lisans</h3>
+              <p data-i18n="timeline_2_desc">Hukuk Fakültesi mezuniyeti ve özel hukuk alanındaki temel çalışmalar.</p>
             </div>
           </article>
           <article class="timeline-item">
-            <div class="timeline-year">GÜNCEL</div>
+            <div class="timeline-year" data-i18n="timeline_current">GÜNCEL</div>
             <div>
-              <h3>Avukatlık ve Danışmanlık</h3>
-              <p>Deniz Hukuku, İcra-İflas takipleri, sözleşmeler ve uyuşmazlık çözümü alanlarında aktif vekillik ve danışmanlık hizmeti.</p>
+              <h3 data-i18n="timeline_3_title">Avukatlık ve Danışmanlık</h3>
+              <p data-i18n="timeline_3_desc">Deniz Hukuku, İcra-İflas takipleri, sözleşmeler ve uyuşmazlık çözümü alanlarında aktif vekillik ve danışmanlık hizmeti.</p>
             </div>
           </article>
         </div>
-        <div class="credential-list" aria-label="Yayın yaklaşımı">
+        <div class="credential-list">
           <article class="credential">
-            <span class="tiny-label">Alan 01</span>
-            <h3>Deniz Hukuku</h3>
-            <p>Gemi ve yat alım & satım süreçleri, gemi ihtiyati hacizleri, çarterparti ve yük uyuşmazlıkları ile deniz sigortaları.</p>
+            <span class="tiny-label" data-i18n="card_1_label">Alan 01</span>
+            <h3 data-i18n="card_1_title">Deniz Hukuku</h3>
+            <p data-i18n="card_1_desc">Gemi ve yat alım & satım süreçleri, gemi ihtiyati hacizleri, çarterparti ve yük uyuşmazlıkları ile deniz sigortaları.</p>
           </article>
           <article class="credential">
-            <span class="tiny-label">Alan 02</span>
-            <h3>İcra Hukuku</h3>
-            <p>Alacak takibi, ihtiyati haciz süreçleri ve kurumsal icra yönetimi.</p>
+            <span class="tiny-label" data-i18n="card_2_label">Alan 02</span>
+            <h3 data-i18n="card_2_title">İcra Hukuku</h3>
+            <p data-i18n="card_2_desc">Alacak takibi, ihtiyati haciz süreçleri ve kurumsal icra yönetimi.</p>
           </article>
           <article class="credential">
-            <span class="tiny-label">Alan 03</span>
-            <h3>Sözleşmeler</h3>
-            <p>Ulusal ve uluslararası ticari sözleşmelerin hazırlanması ve müzakeresi.</p>
+            <span class="tiny-label" data-i18n="card_3_label">Alan 03</span>
+            <h3 data-i18n="card_3_title">Sözleşmeler</h3>
+            <p data-i18n="card_3_desc">Ulusal ve uluslararası ticari sözleşmelerin hazırlanması ve müzakeresi.</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ÇALIŞMA ALANLARI -->
-    <section class="section" id="alanlar" aria-labelledby="areas-title">
+    <section class="section" id="alanlar">
       <div class="shell areas-layout">
         <div>
-          <p class="eyebrow">Çalışma Alanları</p>
-          <h2 class="section-title" id="areas-title">Uzmanlık ve <em>faaliyet</em> alanları.</h2>
-          <p class="section-intro">Müvekkil ihtiyaçlarına odaklanan, uyuşmazlık öncesi ve sonrası kapsamlı hukuki destek.</p>
+          <p class="eyebrow" data-i18n="practice_eyebrow">Çalışma Alanları</p>
+          <h2 class="section-title" data-i18n="practice_title">Uzmanlık ve <em>faaliyet</em> alanları.</h2>
+          <p class="section-intro" data-i18n="practice_intro">Müvekkil ihtiyaçlarına odaklanan, uyuşmazlık öncesi ve sonrası kapsamlı hukuki destek.</p>
         </div>
         <div class="area-list">
-          <article class="area"><span class="area-no">01</span><div><h3>Deniz Ticareti ve Sigorta Hukuku</h3><p>Gemi & yat alım-satımı, gemi tutuklama/ihtiyati haciz, çarterparti, yük hasarı ve zıyaı uyuşmazlıkları ile deniz sigortaları.</p></div><span class="area-arrow">↗</span></article>
-          <article class="area"><span class="area-no">02</span><div><h3>İcra ve İflas Hukuku</h3><p>İlamlı/ilamsız icra takipleri, menfi tespit ve istirdat davaları, rehin/ipotek paraya çevrilmesi.</p></div><span class="area-arrow">↗</span></article>
-          <article class="area"><span class="area-no">03</span><div><h3>Borçlar ve Sözleşmeler Hukuku</h3><p>Ticari sözleşmelerin tanzimi, fesih süreçleri ve tazminat sorumlulukları.</p></div><span class="area-arrow">↗</span></article>
-          <article class="area"><span class="area-no">04</span><div><h3>Uyuşmazlık Çözümü ve Dava Takibi</h3><p>Ulusal mahkemeler ve tahkim nezdindeki ticari uyuşmazlıkların takibi.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">01</span><div><h3 data-i18n="area_1_title">Deniz Ticareti ve Sigorta Hukuku</h3><p data-i18n="area_1_desc">Gemi & yat alım-satımı, gemi tutuklama/ihtiyati haciz, çarterparti, yük hasarı ve zıyaı uyuşmazlıkları ile deniz sigortaları.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">02</span><div><h3 data-i18n="area_2_title">İcra ve İflas Hukuku</h3><p data-i18n="area_2_desc">İlamlı/ilamsız icra takipleri, menfi tespit ve istirdat davaları, rehin/ipotek paraya çevrilmesi.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">03</span><div><h3 data-i18n="area_3_title">Borçlar ve Sözleşmeler Hukuku</h3><p data-i18n="area_3_desc">Ticari sözleşmelerin tanzimi, fesih süreçleri ve tazminat sorumlulukları.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">04</span><div><h3 data-i18n="area_4_title">Uyuşmazlık Çözümü ve Dava Takibi</h3><p data-i18n="area_4_desc">Ulusal mahkemeler ve tahkim nezdindeki ticari uyuşmazlıkların takibi.</p></div><span class="area-arrow">↗</span></article>
         </div>
       </div>
     </section>
 
     <!-- BLOG / YAZILAR -->
-    <section class="section section-soft" id="yazilar" aria-labelledby="articles-title">
+    <section class="section section-soft" id="yazilar">
       <div class="shell">
         <div class="blog-head">
-          <div><p class="eyebrow">Blog / İncelemeler</p><h2 class="section-title" id="articles-title">Notlar, kararlar ve <em>hukuki</em> incelemeler.</h2></div>
+          <div><p class="eyebrow" data-i18n="articles_eyebrow">Blog / İncelemeler</p><h2 class="section-title" data-i18n="articles_title">Notlar, kararlar ve <em>hukuki</em> incelemeler.</h2></div>
           <div class="blog-controls">
-            <div class="search-wrap"><svg class="icon"><use href="#search"></use></svg><label class="skip-link" for="article-search">Yazılarda ara</label><input class="search-input" id="article-search" type="search" placeholder="Başlık veya konu ara" autocomplete="off" /></div>
-            <div class="filter-row" aria-label="Makale kategorileri"><button class="filter active" type="button" data-filter="Tümü" aria-pressed="true">Tümü</button><button class="filter" type="button" data-filter="İdare Hukuku" aria-pressed="false">İdare Hukuku</button><button class="filter" type="button" data-filter="Kişisel Verilerin Korunması" aria-pressed="false">KVKK</button><button class="filter" type="button" data-filter="Borçlar Hukuku" aria-pressed="false">Borçlar</button></div>
+            <div class="search-wrap"><svg class="icon"><use href="#search"></use></svg><input class="search-input" id="article-search" type="search" placeholder="Başlık veya konu ara" data-placeholder-i18n="search_placeholder" autocomplete="off" /></div>
+            <div class="filter-row"><button class="filter active" type="button" data-filter="Tümü" data-i18n="filter_all">Tümü</button><button class="filter" type="button" data-filter="İdare Hukuku" data-i18n="filter_admin">İdare Hukuku</button><button class="filter" type="button" data-filter="Kişisel Verilerin Korunması" data-i18n="filter_kvkk">KVKK</button><button class="filter" type="button" data-filter="Borçlar Hukuku" data-i18n="filter_obligations">Borçlar</button></div>
           </div>
         </div>
         <div class="article-grid">
-          <article class="article-card" data-category="İdare Hukuku"><div class="article-meta"><span>İdare Hukuku</span><time datetime="2026-06-12">12.06.2026</time></div><h3>İdari işlemin gerekçesi: yargısal denetimin görünür zemini</h3><p>Gerekçe yükümlülüğünün etkili başvuru ve yargısal denetim bakımından işlevi üzerine kısa bir not.</p><button class="article-link" type="button" data-article="idari-yargi">Yazıyı oku</button></article>
-          <article class="article-card" data-category="Kişisel Verilerin Korunması"><div class="article-meta"><span>KVKK</span><time datetime="2026-05-28">28.05.2026</time></div><h3>Aydınlatma yükümlülüğü ve veri işleme amacı arasındaki bağ</h3><p>Şeffaflık ilkesini somutlaştıran aydınlatma metinlerinin belirli ve anlaşılır olması üzerine.</p><button class="article-link" type="button" data-article="kisisel-veri">Yazıyı oku</button></article>
-          <article class="article-card" data-category="Borçlar Hukuku"><div class="article-meta"><span>Borçlar Hukuku</span><time datetime="2026-05-06">06.05.2026</time></div><h3>Sözleşme öncesi bilgi paylaşımında dürüstlük kuralının sınırları</h3><p>Görüşme sürecinde bilgi paylaşımının somut olay bağlamında değerlendirilmesi üzerine.</p><button class="article-link" type="button" data-article="sozlesme">Yazıyı oku</button></article>
+          <article class="article-card" data-category="İdare Hukuku"><div class="article-meta"><span data-i18n="filter_admin">İdare Hukuku</span><time datetime="2026-06-12">12.06.2026</time></div><h3 data-i18n="post_1_title">İdari işlemin gerekçesi: yargısal denetimin görünür zemini</h3><p data-i18n="post_1_desc">Gerekçe yükümlülüğünün etkili başvuru ve yargısal denetim bakımından işlevi üzerine kısa bir not.</p><button class="article-link" type="button" data-article="idari-yargi" data-i18n="read_btn">Yazıyı oku</button></article>
+          <article class="article-card" data-category="Kişisel Verilerin Korunması"><div class="article-meta"><span data-i18n="filter_kvkk">KVKK</span><time datetime="2026-05-28">28.05.2026</time></div><h3 data-i18n="post_2_title">Aydınlatma yükümlülüğü ve veri işleme amacı arasındaki bağ</h3><p data-i18n="post_2_desc">Şeffaflık ilkesini somutlaştıran aydınlatma metinlerinin belirli ve anlaşılır olması üzerine.</p><button class="article-link" type="button" data-article="kisisel-veri" data-i18n="read_btn">Yazıyı oku</button></article>
+          <article class="article-card" data-category="Borçlar Hukuku"><div class="article-meta"><span data-i18n="filter_obligations">Borçlar Hukuku</span><time datetime="2026-05-06">06.05.2026</time></div><h3 data-i18n="post_3_title">Sözleşme öncesi bilgi paylaşımında dürüstlük kuralının sınırları</h3><p data-i18n="post_3_desc">Görüşme sürecinde bilgi paylaşımının somut olay bağlamında değerlendirilmesi üzerine.</p><button class="article-link" type="button" data-article="sozlesme" data-i18n="read_btn">Yazıyı oku</button></article>
         </div>
-        <p class="no-results" id="no-results" role="status">Aramanızla eşleşen bir yazı bulunamadı.</p>
+        <p class="no-results" id="no-results" data-i18n="no_results">Aramanızla eşleşen bir yazı bulunamadı.</p>
       </div>
     </section>
 
     <!-- İLETİŞİM -->
-    <section class="section" id="iletisim" aria-labelledby="contact-title">
+    <section class="section" id="iletisim">
       <div class="shell contact-grid">
         <div>
-          <p class="eyebrow">İletişim ve Ulaşılabilirlik</p>
-          <h2 class="section-title" id="contact-title">İletişim için sade ve <em>açık</em> bir kanal.</h2>
-          <p class="section-intro">İlk temas için yazılı iletişim tercih edilir. Danışmanlık ve dava talepleriniz için aşağıdaki kanallardan ulaşabilirsiniz.</p>
+          <p class="eyebrow" data-i18n="contact_eyebrow">İletişim ve Ulaşılabilirlik</p>
+          <h2 class="section-title" data-i18n="contact_title">İletişim için sade ve <em>açık</em> bir kanal.</h2>
+          <p class="section-intro" data-i18n="contact_intro">İlk temas için yazılı iletişim tercih edilir. Danışmanlık ve dava talepleriniz için aşağıdaki kanallardan ulaşabilirsiniz.</p>
           <div class="contact-data">
-            <a href="mailto:tungasedat@gmail.com"><span class="data-label">E-posta</span><span>tungasedat@gmail.com</span></a>
-            <a href="tel:+905386128125"><span class="data-label">Telefon</span><span>+90 538 612 81 25</span></a>
-            <p><span class="data-label">Ofis</span><span>İstanbul, Türkiye</span></p>
+            <a href="mailto:tungasedat@gmail.com"><span class="data-label" data-i18n="label_email">E-posta</span><span>tungasedat@gmail.com</span></a>
+            <a href="tel:+905386128125"><span class="data-label" data-i18n="label_phone">Telefon</span><span>+90 538 612 81 25</span></a>
+            <p><span class="data-label" data-i18n="label_office">Ofis</span><span data-i18n="office_location">İstanbul, Türkiye</span></p>
           </div>
           <div class="contact-links">
             <a class="button button-small" href="https://www.linkedin.com/in/sedattunga/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <button class="button button-small" id="vcard-download" type="button">vCard indir ↓</button>
+            <button class="button button-small" id="vcard-download" type="button" data-i18n="vcard_btn">vCard indir ↓</button>
           </div>
         </div>
         
         <form class="contact-form" id="contact-form" action="https://formspree.io/f/tungasedat@gmail.com" method="POST">
-          <h3 class="form-title">Bir mesaj bırakın.</h3>
+          <h3 class="form-title" data-i18n="form_title">Bir mesaj bırakın.</h3>
           <div class="form-row">
-            <div class="field"><label for="name">Ad soyad *</label><input id="name" name="name" type="text" required /></div>
-            <div class="field"><label for="email">E-posta *</label><input id="email" name="_replyto" type="email" required /></div>
+            <div class="field"><label for="name" data-i18n="form_name">Ad soyad *</label><input id="name" name="name" type="text" required /></div>
+            <div class="field"><label for="email" data-i18n="form_email">E-posta *</label><input id="email" name="_replyto" type="email" required /></div>
           </div>
-          <div class="field"><label for="subject">Konu</label><input id="subject" name="_subject" type="text" /></div>
-          <div class="field"><label for="message">Mesajınız *</label><textarea id="message" name="message" required></textarea></div>
-          <button class="button" type="submit" id="submit-btn">Mesajı Gönder <span class="arrow">→</span></button>
+          <div class="field"><label for="subject" data-i18n="form_subject">Konu</label><input id="subject" name="_subject" type="text" /></div>
+          <div class="field"><label for="message" data-i18n="form_msg">Mesajınız *</label><textarea id="message" name="message" required></textarea></div>
+          <button class="button" type="submit" id="submit-btn"><span data-i18n="form_send">Mesajı Gönder</span> <span class="arrow">→</span></button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-note">Bu form genel bilgilendirme amaçlıdır; avukat-müvekkil ilişkisi oluşturmaz.</p>
+          <p class="form-note" data-i18n="form_note">Bu form genel bilgilendirme amaçlıdır; avukat-müvekkil ilişkisi oluşturmaz.</p>
         </form>
       </div>
     </section>
@@ -194,8 +213,8 @@
         <img src="sedat-tunga-imza.png" alt="Av. Sedat Tunga" style="height: 2.2rem; width: auto; object-fit: contain; border: 0; padding: 0;" />
       </div>
       <div class="footer-meta">
-        <p>© <span id="year">2026</span> Av. Sedat Tunga. Tüm hakları saklıdır.</p>
-        <p>Bu internet sitesindeki içerik, 1136 sayılı Avukatlık Kanunu, ilgili meslek kuralları ve TBB Reklam Yasağı Yönetmeliği gözetilerek genel bilgilendirme amacıyla hazırlanmıştır. İçerik, hukuki danışmanlık niteliği taşımaz.</p>
+        <p>© <span id="year">2026</span> Av. Sedat Tunga. <span data-i18n="footer_rights">Tüm hakları saklıdır.</span></p>
+        <p data-i18n="footer_legal">Bu internet sitesindeki içerik, 1136 sayılı Avukatlık Kanunu, ilgili meslek kuralları ve TBB Reklam Yasağı Yönetmeliği gözetilerek genel bilgilendirme amacıyla hazırlanmıştır. İçerik, hukuki danışmanlık niteliği taşımaz.</p>
       </div>
     </div>
   </footer>
