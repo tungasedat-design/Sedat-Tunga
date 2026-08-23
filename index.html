@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Av. Sedat Tunga - Deniz Hukuku, Deniz İş Hukuku, İcra, Kira ve İş Hukuku Danışmanlığı" />
+  <meta name="description" content="Av. Sedat Tunga - Deniz Hukuku, Gemi & Yat Alım Satımı, Deniz İş, İcra, Kira, İş ve Sözleşmeler Hukuku" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1E314A" />
   <link rel="canonical" href="https://www.sedattunga.av.tr/" />
@@ -52,18 +52,23 @@
       border-color: #aabfd6 !important;
       background: rgba(255, 255, 255, 0.15) !important;
     }
-    .credential-list-expanded {
+    
+    /* 7 ALAN İÇİN GELİŞMİŞ GRID */
+    .credential-list-7 {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 1px;
       margin-top: 3.5rem;
       background: var(--line);
       border: 1px solid var(--line);
     }
-    @media (max-width: 900px) {
-      .credential-list-expanded {
-        grid-template-columns: 1fr;
-      }
+    .credential-list-7 .credential {
+      min-height: 11rem;
+      padding: 1.55rem;
+      background: var(--paper);
+    }
+    body.dark .credential-list-7 .credential {
+      background: var(--paper);
     }
   </style>
 </head>
@@ -123,7 +128,7 @@
         <div class="hero-content" style="max-width: 54rem;">
           <p class="eyebrow" data-i18n="hero_eyebrow">Hukuk · Akademik İncelemeler · Blog</p>
           <h1 id="hero-title" style="font-size: clamp(3rem, 6.5vw, 5.5rem);" data-i18n="hero_title">Hukuki meseleleri <span>bağlamı</span> içinde okumak.</h1>
-          <p class="hero-lede" data-i18n="hero_desc">Av. Sedat Tunga'nın deniz hukuku, deniz iş hukuku, icra takipleri, kira ve iş hukuku odağındaki mesleki ve akademik inceleme notları.</p>
+          <p class="hero-lede" data-i18n="hero_desc">Av. Sedat Tunga'nın deniz hukuku, gemi alım-satımı, icra, kira, iş ve sözleşmeler hukuku odağındaki mesleki ve akademik inceleme notları.</p>
           <div class="button-row">
             <a class="button" href="#ozgecmis"><span data-i18n="hero_btn_resume">Özgeçmişi incele</span> <span class="arrow">→</span></a>
             <a class="button button-outline" href="#yazilar"><span data-i18n="hero_btn_articles">Yazılara göz at</span> <span class="arrow">→</span></a>
@@ -140,7 +145,7 @@
         <div class="about-text" style="font-size: 1.05rem; line-height: 1.85; max-width: 100%;">
           <p data-i18n="about_p1">Av. Sedat Tunga, 2023 yılında <strong>Koç Üniversitesi Hukuk Fakültesi</strong>'nden mezun olmuştur. Lisans eğitiminin ardından İngiltere'de bulunan <strong>Swansea University</strong> bünyesinde Uluslararası Deniz Hukuku (LL.M.) yüksek lisans programını 2024 yılında tamamlamıştır.</p>
           <p data-i18n="about_p2">Yüksek lisans sürecinde akademik araştırmalarını ve tez çalışmasını özellikle <strong>Çarterparti (Charterparties)</strong> ve <strong>Deniz Sigortası (Marine Insurance)</strong> alanları üzerine yoğunlaştırmıştır.</p>
-          <p data-i18n="about_p3">Güncel mesleki pratiğinde başta <strong>Deniz Ticareti ve Deniz İş Hukuku</strong> olmak üzere <strong>İcra ve İflas Hukuku</strong>, <strong>İş Hukuku</strong> ve <strong>Kira Hukuku</strong> alanlarında aktif olarak avukatlık ve hukuki danışmanlık hizmeti sunmaktadır.</p>
+          <p data-i18n="about_p3">Güncel mesleki pratiğinde Deniz Ticareti Hukuku, Gemi & Yat Alım Satımı, Deniz İş Hukuku, İcra ve İflas Hukuku, Kira Hukuku, İş Hukuku ve Sözleşmeler Hukuku alanlarında aktif olarak avukatlık ve hukuki danışmanlık hizmeti sunmaktadır.</p>
         </div>
         <div class="availability-note" style="margin-top: 2.5rem;">
           <strong data-i18n="disclaimer_label">Not:</strong>
@@ -149,7 +154,7 @@
       </div>
     </section>
 
-    <!-- ÖZGEÇMİŞ -->
+    <!-- ÖZGEÇMİŞ & 7 ALAN KARTLARI -->
     <section class="section section-soft" id="ozgecmis">
       <div class="shell">
         <p class="eyebrow" data-i18n="resume_eyebrow">Eğitim ve Deneyim</p>
@@ -174,50 +179,73 @@
             <div class="timeline-year" data-i18n="timeline_current">GÜNCEL</div>
             <div>
               <h3 data-i18n="timeline_3_title">Avukatlık ve Danışmanlık</h3>
-              <p data-i18n="timeline_3_desc">Deniz Hukuku, Deniz İş Hukuku, İcra-İflas, Kira ve İş Hukuku uyuşmazlıklarında aktif vekillik ve danışmanlık.</p>
+              <p data-i18n="timeline_3_desc">Deniz ticareti, gemi işlemleri, icra-iflas, kira, iş ve sözleşmeler hukuku alanlarında aktif vekillik ve danışmanlık hizmeti.</p>
             </div>
           </article>
         </div>
         
-        <div class="credential-list-expanded">
+        <!-- 7 AYRI ALAN KARTI -->
+        <div class="credential-list-7">
           <article class="credential">
             <span class="tiny-label" data-i18n="card_1_label">Alan 01</span>
-            <h3 data-i18n="card_1_title">Deniz & Deniz İş Hukuku</h3>
-            <p data-i18n="card_1_desc">Gemi/yat alım-satım, ihtiyati haciz, çarterparti, yük hasarları ve gemiadamı alacakları.</p>
+            <h3 data-i18n="card_1_title">Deniz Ticaret Hukuku</h3>
+            <p data-i18n="card_1_desc">Gemi ihtiyati hacizleri (tutuklama), çarterparti, navlun ve yük uyuşmazlıkları ile deniz sigortaları.</p>
           </article>
           <article class="credential">
             <span class="tiny-label" data-i18n="card_2_label">Alan 02</span>
-            <h3 data-i18n="card_2_title">İcra & İflas Hukuku</h3>
-            <p data-i18n="card_2_desc">Alacak tahsili, ihtiyati hacizler, menfi tespit davaları ve kurumsal icra yönetimi.</p>
+            <h3 data-i18n="card_2_title">Gemi & Yat Alım Satımı</h3>
+            <p data-i18n="card_2_desc">MOA sözleşmeleri, bayrak ve sicil tescil işlemleri, kapanış süreçleri ve hukuki durum tespiti (due diligence).</p>
           </article>
           <article class="credential">
             <span class="tiny-label" data-i18n="card_3_label">Alan 03</span>
-            <h3 data-i18n="card_3_title">Kira & İş Hukuku</h3>
-            <p data-i18n="card_3_desc">Tahliye davaları, kira tespiti/uyarlaması, işçilik alacakları ve işe iade süreçleri.</p>
+            <h3 data-i18n="card_3_title">Deniz İş Hukuku</h3>
+            <p data-i18n="card_3_desc">854 sayılı Deniz İş Kanunu kapsamında gemiadamı ücretleri, kıdem/ihbar tazminatları ve gemi alacaklısı hakları.</p>
+          </article>
+          <article class="credential">
+            <span class="tiny-label" data-i18n="card_4_label">Alan 04</span>
+            <h3 data-i18n="card_4_title">İcra İflas Hukuku</h3>
+            <p data-i18n="card_4_desc">İlamlı ve ilamsız takipler, ihtiyati hacizler, itirazın iptali ve kurumsal alacak yönetimi.</p>
+          </article>
+          <article class="credential">
+            <span class="tiny-label" data-i18n="card_5_label">Alan 05</span>
+            <h3 data-i18n="card_5_title">Kira Hukuku</h3>
+            <p data-i18n="card_5_desc">Tahliye davaları (taahhüt, ihtiyaç, temerrüt), kira bedeli tespiti ve uyarlama uyuşmazlıkları.</p>
+          </article>
+          <article class="credential">
+            <span class="tiny-label" data-i18n="card_6_label">Alan 06</span>
+            <h3 data-i18n="card_6_title">İş Hukuku</h3>
+            <p data-i18n="card_6_desc">İşe iade davaları, kıdem ve ihbar tazminatı, fazla mesai alacakları ve iş sözleşmelerinin tanzimi.</p>
+          </article>
+          <article class="credential">
+            <span class="tiny-label" data-i18n="card_7_label">Alan 07</span>
+            <h3 data-i18n="card_7_title">Sözleşmeler Hukuku</h3>
+            <p data-i18n="card_7_desc">Ulusal ve uluslararası ticari sözleşmelerin hazırlanması, müzakeresi, risk analizi ve fesih süreçleri.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ÇALIŞMA ALANLARI -->
+    <!-- ÇALIŞMA ALANLARI (7 ALAN LİSTESİ) -->
     <section class="section" id="alanlar">
       <div class="shell areas-layout">
         <div>
           <p class="eyebrow" data-i18n="practice_eyebrow">Çalışma Alanları</p>
           <h2 class="section-title" data-i18n="practice_title">Uzmanlık ve <em>faaliyet</em> alanları.</h2>
-          <p class="section-intro" data-i18n="practice_intro">Müvekkil ihtiyaçlarına odaklanan, uyuşmazlık öncesi ve sonrası kapsamlı hukuki destek.</p>
+          <p class="section-intro" data-i18n="practice_intro">Müvekkil odaklı, uyuşmazlık öncesi koruyucu ve sonrası dava odaklı kapsamlı hukuki danışmanlık.</p>
         </div>
         <div class="area-list">
-          <article class="area"><span class="area-no">01</span><div><h3 data-i18n="area_1_title">Deniz Ticareti ve Deniz Sigortası Hukuku</h3><p data-i18n="area_1_desc">Gemi & yat alım-satımı, gemi tutuklama/ihtiyati haciz, çarterparti ve yük hasarı uyuşmazlıkları.</p></div><span class="area-arrow">↗</span></article>
-          <article class="area"><span class="area-no">02</span><div><h3 data-i18n="area_2_title">Deniz İş Hukuku</h3><p data-i18n="area_2_desc">Gemiadamı hizmet sözleşmeleri, ücret, kıdem/ihbar ve deniz iş kanunundan doğan alacak davaları.</p></div><span class="area-arrow">↗</span></article>
-          <article class="area"><span class="area-no">03</span><div><h3 data-i18n="area_3_title">İcra ve İflas Hukuku</h3><p data-i18n="area_3_desc">İlamlı/ilamsız icra takipleri, borca itirazın iptali, menfi tespit ve rehnin paraya çevrilmesi.</p></div><span class="area-arrow">↗</span></article>
-          <article class="area"><span class="area-no">04</span><div><h3 data-i18n="area_4_title">İş ve Sosyal Güvenlik Hukuku</h3><p data-i18n="area_4_desc">İşe iade, kıdem ve ihbar tazminatı, fazla mesai alacakları ve iş sözleşmelerinin düzenlenmesi.</p></div><span class="area-arrow">↗</span></article>
-          <article class="area"><span class="area-no">05</span><div><h3 data-i18n="area_5_title">Kira Hukuku ve Gayrimenkul</h3><p data-i18n="area_5_desc">Tahliye davaları (ihtiyaç, taahhüt, temerrüt), kira tespit ve kira bedeli uyarlama uyuşmazlıkları.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">01</span><div><h3 data-i18n="area_1_title">Deniz Ticaret Hukuku</h3><p data-i18n="area_1_desc">Gemi tutuklama/ihtiyati haciz, çarterparti, deniz sigortaları ve yük claims uyuşmazlıkları.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">02</span><div><h3 data-i18n="area_2_title">Gemi & Yat Alım Satımı</h3><p data-i18n="area_2_desc">Satım sözleşmeleri (Saleform/MOA), bayrak ve sicil tescili, teslim ve mülkiyet devir süreçleri.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">03</span><div><h3 data-i18n="area_3_title">Deniz İş Hukuku</h3><p data-i18n="area_3_desc">Gemiadamı hizmet sözleşmeleri, ücret ve tazminat alacakları, kanuni rehin ve gemi alacaklısı hakları.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">04</span><div><h3 data-i18n="area_4_title">İcra İflas Hukuku</h3><p data-i18n="area_4_desc">İlamlı/ilamsız icra takipleri, menfi tespit davaları, itirazın iptali ve rehnin paraya çevrilmesi.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">05</span><div><h3 data-i18n="area_5_title">Kira Hukuku</h3><p data-i18n="area_5_desc">Tahliye taahhüdü icrası, ihtiyaç/yeniden imar sebebiyle tahliye, kira tespit ve uyarlama davaları.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">06</span><div><h3 data-i18n="area_6_title">İş Hukuku</h3><p data-i18n="area_6_desc">İşe iade, kıdem/ihbar tazminatları, mobbing, iş kazası tazminatları ve işçilik alacakları davaları.</p></div><span class="area-arrow">↗</span></article>
+          <article class="area"><span class="area-no">07</span><div><h3 data-i18n="area_7_title">Sözleşmeler Hukuku</h3><p data-i18n="area_7_desc">Ticari, distribütörlük, franchise ve ortaklık sözleşmelerinin tanzimi ve ihtilaf yönetimi.</p></div><span class="area-arrow">↗</span></article>
         </div>
       </div>
     </section>
 
-    <!-- BLOG / YAZILAR (ALANLARLA BİREBİR EŞLEŞTİRİLDİ) -->
+    <!-- BLOG / YAZILAR -->
     <section class="section section-soft" id="yazilar">
       <div class="shell">
         <div class="blog-head">
@@ -304,7 +332,7 @@
     </div>
   </footer>
 
-  <!-- MODAL PENCERESİ (YAZILAR İÇİN) -->
+  <!-- MODAL PENCERESİ -->
   <div class="modal" id="article-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <article class="modal-dialog">
       <button class="modal-close" id="modal-close" type="button" aria-label="Kapat"></button>
@@ -389,28 +417,37 @@
         nav_about: 'Hakkımda', nav_resume: 'Özgeçmiş', nav_practice: 'Çalışma Alanları', nav_articles: 'Yazılar', nav_contact: 'İletişim',
         hero_eyebrow: 'Hukuk · Akademik İncelemeler · Blog',
         hero_title: 'Hukuki meseleleri <span>bağlamı</span> içinde okumak.',
-        hero_desc: "Av. Sedat Tunga'nın deniz hukuku, deniz iş hukuku, icra takipleri, kira ve iş hukuku odağındaki mesleki ve akademik inceleme notları.",
+        hero_desc: "Av. Sedat Tunga'nın deniz ticareti, gemi alım-satımı, icra, kira, iş ve sözleşmeler hukuku odağındaki mesleki ve akademik inceleme notları.",
         hero_btn_resume: 'Özgeçmişi incele', hero_btn_articles: 'Yazılara göz at',
         about_eyebrow: 'Hakkımda', about_title: 'Av. Sedat Tunga <em>kimdir?</em>',
         about_p1: "Av. Sedat Tunga, 2023 yılında <strong>Koç Üniversitesi Hukuk Fakültesi</strong>'nden mezun olmuştur. Lisans eğitiminin ardından İngiltere'de bulunan <strong>Swansea University</strong> bünyesinde Uluslararası Deniz Hukuku (LL.M.) yüksek lisans programını 2024 yılında tamamlamıştır.",
         about_p2: "Yüksek lisans sürecinde akademik araştırmalarını ve tez çalışmasını özellikle <strong>Çarterparti (Charterparties)</strong> ve <strong>Deniz Sigortası (Marine Insurance)</strong> alanları üzerine yoğunlaştırmıştır.",
-        about_p3: "Güncel mesleki pratiğinde başta <strong>Deniz Ticareti ve Deniz İş Hukuku</strong> olmak üzere <strong>İcra ve İflas Hukuku</strong>, <strong>İş Hukuku</strong> ve <strong>Kira Hukuku</strong> alanlarında aktif olarak avukatlık ve hukuki danışmanlık hizmeti sunmaktadır.",
+        about_p3: "Güncel mesleki pratiğinde Deniz Ticareti Hukuku, Gemi & Yat Alım Satımı, Deniz İş Hukuku, İcra ve İflas Hukuku, Kira Hukuku, İş Hukuku ve Sözleşmeler Hukuku alanlarında aktif olarak avukatlık ve hukuki danışmanlık hizmeti sunmaktadır.",
         disclaimer_label: 'Not:', disclaimer_text: 'Buradaki içerikler genel bilgilendirme niteliğindedir; hukuki danışmanlık veya vekillik ilişkisi kurmaz.',
         resume_eyebrow: 'Eğitim ve Deneyim', resume_title: 'Eğitim, uzmanlık ve <em>uygulama</em> geçmişi.',
         resume_intro: 'Uluslararası deniz ticareti ve özel hukuk pratiklerini akademik derinlikle birleştiren mesleki kronoloji.',
         timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Uluslararası Deniz Hukuku Yüksek Lisans Programı. Tez: Çarterparti Sözleşmeleri ve Deniz Sigortası Hukuku İncelemeleri.',
         timeline_2_title: 'Koç Üniversitesi — Lisans', timeline_2_desc: 'Hukuk Fakültesi mezuniyeti ve özel hukuk alanındaki temel çalışmalar.',
-        timeline_current: 'GÜNCEL', timeline_3_title: 'Avukatlık ve Danışmanlık', timeline_3_desc: 'Deniz Hukuku, Deniz İş Hukuku, İcra-İflas, Kira ve İş Hukuku uyuşmazlıklarında aktif vekillik ve danışmanlık.',
-        card_1_label: 'Alan 01', card_1_title: 'Deniz & Deniz İş Hukuku', card_1_desc: 'Gemi/yat alım-satım, ihtiyati haciz, çarterparti, yük hasarları ve gemiadamı alacakları.',
-        card_2_label: 'Alan 02', card_2_title: 'İcra & İflas Hukuku', card_2_desc: 'Alacak tahsili, ihtiyati hacizler, menfi tespit davaları ve kurumsal icra yönetimi.',
-        card_3_label: 'Alan 03', card_3_title: 'Kira & İş Hukuku', card_3_desc: 'Tahliye davaları, kira tespiti/uyarlaması, işçilik alacakları ve işe iade süreçleri.',
+        timeline_current: 'GÜNCEL', timeline_3_title: 'Avukatlık ve Danışmanlık', timeline_3_desc: 'Deniz ticareti, gemi işlemleri, icra-iflas, kira, iş ve sözleşmeler hukuku alanlarında aktif vekillik ve danışmanlık hizmeti.',
+        
+        card_1_label: 'Alan 01', card_1_title: 'Deniz Ticaret Hukuku', card_1_desc: 'Gemi ihtiyati hacizleri (tutuklama), çarterparti, navlun ve yük uyuşmazlıkları ile deniz sigortaları.',
+        card_2_label: 'Alan 02', card_2_title: 'Gemi & Yat Alım Satımı', card_2_desc: 'MOA sözleşmeleri, bayrak ve sicil tescil işlemleri, kapanış süreçleri ve hukuki durum tespiti (due diligence).',
+        card_3_label: 'Alan 03', card_3_title: 'Deniz İş Hukuku', card_3_desc: '854 sayılı Deniz İş Kanunu kapsamında gemiadamı ücretleri, kıdem/ihbar tazminatları ve gemi alacaklısı hakları.',
+        card_4_label: 'Alan 04', card_4_title: 'İcra İflas Hukuku', card_4_desc: 'İlamlı ve ilamsız takipler, ihtiyati hacizler, itirazın iptali ve kurumsal alacak yönetimi.',
+        card_5_label: 'Alan 05', card_5_title: 'Kira Hukuku', card_5_desc: 'Tahliye davaları (taahhüt, ihtiyaç, temerrüt), kira bedeli tespiti ve uyarlama uyuşmazlıkları.',
+        card_6_label: 'Alan 06', card_6_title: 'İş Hukuku', card_6_desc: 'İşe iade davaları, kıdem ve ihbar tazminatı, fazla mesai alacakları ve iş sözleşmelerinin tanzimi.',
+        card_7_label: 'Alan 07', card_7_title: 'Sözleşmeler Hukuku', card_7_desc: 'Ulusal ve uluslararası ticari sözleşmelerin hazırlanması, müzakeresi, risk analizi ve fesih süreçleri.',
+
         practice_eyebrow: 'Çalışma Alanları', practice_title: 'Uzmanlık ve <em>faaliyet</em> alanları.',
-        practice_intro: 'Müvekkil ihtiyaçlarına odaklanan, uyuşmazlık öncesi ve sonrası kapsamlı hukuki destek.',
-        area_1_title: 'Deniz Ticareti ve Deniz Sigortası Hukuku', area_1_desc: 'Gemi & yat alım-satımı, gemi tutuklama/ihtiyati haciz, çarterparti ve yük hasarı uyuşmazlıkları.',
-        area_2_title: 'Deniz İş Hukuku', area_2_desc: 'Gemiadamı hizmet sözleşmeleri, ücret, kıdem/ihbar ve deniz iş kanunundan doğan alacak davaları.',
-        area_3_title: 'İcra ve İflas Hukuku', area_3_desc: 'İlamlı/ilamsız icra takipleri, borca itirazın iptali, menfi tespit ve rehnin paraya çevrilmesi.',
-        area_4_title: 'İş ve Sosyal Güvenlik Hukuku', area_4_desc: 'İşe iade, kıdem ve ihbar tazminatı, fazla mesai alacakları ve iş sözleşmelerinin düzenlenmesi.',
-        area_5_title: 'Kira Hukuku ve Gayrimenkul', area_5_desc: 'Tahliye davaları (ihtiyaç, taahhüt, temerrüt), kira tespit ve kira bedeli uyarlama uyuşmazlıkları.',
+        practice_intro: 'Müvekkil odaklı, uyuşmazlık öncesi koruyucu ve sonrası dava odaklı kapsamlı hukuki danışmanlık.',
+        area_1_title: 'Deniz Ticaret Hukuku', area_1_desc: 'Gemi tutuklama/ihtiyati haciz, çarterparti, deniz sigortaları ve yük claims uyuşmazlıkları.',
+        area_2_title: 'Gemi & Yat Alım Satımı', area_2_desc: 'Satım sözleşmeleri (Saleform/MOA), bayrak ve sicil tescili, teslim ve mülkiyet devir süreçleri.',
+        area_3_title: 'Deniz İş Hukuku', area_3_desc: 'Gemiadamı hizmet sözleşmeleri, ücret ve tazminat alacakları, kanuni rehin ve gemi alacaklısı hakları.',
+        area_4_title: 'İcra İflas Hukuku', area_4_desc: 'İlamlı/ilamsız icra takipleri, menfi tespit davaları, itirazın iptali ve rehnin paraya çevrilmesi.',
+        area_5_title: 'Kira Hukuku', area_5_desc: 'Tahliye taahhüdü icrası, ihtiyaç/yeniden imar sebebiyle tahliye, kira tespit ve uyarlama davaları.',
+        area_6_title: 'İş Hukuku', area_6_desc: 'İşe iade, kıdem/ihbar tazminatları, mobbing, iş kazası tazminatları ve işçilik alacakları davaları.',
+        area_7_title: 'Sözleşmeler Hukuku', area_7_desc: 'Ticari, distribütörlük, franchise ve ortaklık sözleşmelerinin tanzimi ve ihtilaf yönetimi.',
+
         articles_eyebrow: 'Blog / İncelemeler', articles_title: 'Notlar, kararlar ve <em>hukuki</em> incelemeler.',
         search_placeholder: 'Başlık veya konu ara', filter_all: 'Tümü', filter_maritime: 'Deniz Hukuku', filter_seafarer: 'Deniz İş', filter_tenancy: 'Kira Hukuku',
         post_1_title: 'Gemi İhtiyati Haczi ve Deniz Alacaklarının Teminat Altına Alınması', post_1_desc: 'TTK ve 1999 Cenevre Sözleşmesi uyarınca gemi tutuklama şartları ve deniz alacaklarının icrai güvencesi.',
@@ -427,30 +464,39 @@
       },
       en: {
         nav_about: 'About', nav_resume: 'Resume', nav_practice: 'Practice Areas', nav_articles: 'Articles', nav_contact: 'Contact',
-        hero_eyebrow: 'Maritime · Labour · Tenancy & Enforcement',
+        hero_eyebrow: 'Maritime · Labour · Tenancy & Corporate',
         hero_title: 'Interpreting legal challenges within <span>context</span>.',
-        hero_desc: 'Professional practice and legal insights focusing on maritime law, seafarers\' rights, tenancy, labour, and enforcement procedures by Att. Sedat Tunga.',
+        hero_desc: 'Professional practice and legal insights focusing on maritime trade, ship S&P, seafarer rights, tenancy, labour, and contracts by Att. Sedat Tunga.',
         hero_btn_resume: 'View Resume', hero_btn_articles: 'Explore Articles',
         about_eyebrow: 'About', about_title: 'Who is <em>Att. Sedat Tunga?</em>',
         about_p1: "Att. Sedat Tunga graduated from <strong>Koç University Law School</strong> in 2023. Following his undergraduate legal studies, he completed his LL.M. in International Maritime Law at <strong>Swansea University</strong> in 2024.",
         about_p2: "During his Master's degree, his academic research and dissertation centered predominantly on <strong>Charterparties</strong> and <strong>Marine Insurance</strong>.",
-        about_p3: "In his current practice, he provides advocacy and legal counsel primarily in <strong>Maritime Law</strong>, <strong>Maritime Labour Law</strong>, <strong>Enforcement & Bankruptcy</strong>, <strong>Labour Law</strong>, and <strong>Tenancy Law</strong>.",
+        about_p3: "In his current practice, he provides advocacy and consultancy in Maritime Law, Ship & Yacht S&P, Maritime Labour, Enforcement & Bankruptcy, Tenancy, Labour, and Contract Law.",
         disclaimer_label: 'Note:', disclaimer_text: 'The contents here are for general informational purposes only and do not establish an attorney-client relationship.',
         resume_eyebrow: 'Education & Background', resume_title: 'Education, expertise and <em>professional</em> background.',
-        resume_intro: 'A chronological synthesis of international maritime trade practice and academic rigor.',
+        resume_intro: 'A chronological synthesis of international shipping practice and private law advocacy.',
         timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Master of Laws in International Maritime Law. Dissertation on Charterparties and Marine Insurance.',
         timeline_2_title: 'Koç University — LL.B.', timeline_2_desc: 'Faculty of Law graduation with core focus on private and commercial law.',
-        timeline_current: 'CURRENT', timeline_3_title: 'Legal Practice & Consultancy', timeline_3_desc: 'Active legal representation in shipping disputes, seafarer claims, tenancy evictions, and debt recovery.',
-        card_1_label: 'Area 01', card_1_title: 'Maritime & Seafarer Law', card_1_desc: 'Ship & yacht S&P, ship arrest, charterparties, cargo disputes, and seafarers\' wage claims.',
-        card_2_label: 'Area 02', card_2_title: 'Enforcement & Bankruptcy', card_2_desc: 'Debt recovery, precautionary attachments, insolvency, and institutional execution management.',
-        card_3_label: 'Area 03', card_3_title: 'Tenancy & Labour Law', card_3_desc: 'Eviction actions, rent determination, employment terminations, and re-employment claims.',
+        timeline_current: 'CURRENT', timeline_3_title: 'Legal Practice & Consultancy', timeline_3_desc: 'Active legal representation in shipping, ship transactions, enforcement, tenancy, labour, and commercial contracts.',
+        
+        card_1_label: 'Area 01', card_1_title: 'Maritime Trade Law', card_1_desc: 'Ship arrest (precautionary liens), charterparty disputes, freight, cargo claims, and marine insurance.',
+        card_2_label: 'Area 02', card_2_title: 'Ship & Yacht S&P', card_2_desc: 'MOA agreements, flag registration, closing procedures, and legal due diligence.',
+        card_3_label: 'Area 03', card_3_title: 'Maritime Labour Law', card_3_desc: 'Seafarer employment contracts, wage recovery, severance/notice pay, and statutory maritime liens.',
+        card_4_label: 'Area 04', card_4_title: 'Enforcement & Bankruptcy', card_4_desc: 'Enforcement proceedings, precautionary attachments, debt cancellation, and execution management.',
+        card_5_label: 'Area 05', card_5_title: 'Tenancy Law', card_5_desc: 'Eviction proceedings (undertaking, default, landlord need), rent determination, and lease adjustment.',
+        card_6_label: 'Area 06', card_6_title: 'Labour & Employment Law', card_6_desc: 'Re-employment lawsuits, severance/notice claims, overtime compensation, and employment contracts.',
+        card_7_label: 'Area 07', card_7_title: 'Commercial Contracts', card_7_desc: 'Drafting, negotiating, risk analysis, and termination of domestic and international contracts.',
+
         practice_eyebrow: 'Practice Areas', practice_title: 'Areas of <em>expertise</em> and services.',
-        practice_intro: 'Client-focused, robust legal support across pre-dispute advisory and contentious proceedings.',
-        area_1_title: 'Maritime Trade & Marine Insurance', area_1_desc: 'Ship & yacht S&P, ship arrest, charterparty disputes, cargo claims (loss/damage), and marine insurance.',
-        area_2_title: 'Maritime Labour Law', area_2_desc: 'Seafarer contracts, unpaid wages, severance, notice pay, and statutory maritime lien enforcement.',
-        area_3_title: 'Enforcement & Bankruptcy Law', area_3_desc: 'Debt execution, cancellation of objections, recovery lawsuits, and liquidation of securities.',
-        area_4_title: 'Labour & Employment Law', area_4_desc: 'Re-employment claims, severance/notice packages, overtime pay, and contract drafting.',
-        area_5_title: 'Tenancy & Real Estate Law', area_5_desc: 'Eviction cases (undertaking, default, need), rent determination, and rent adjustment lawsuits.',
+        practice_intro: 'Client-focused, preventive pre-dispute advisory and robust litigation support.',
+        area_1_title: 'Maritime Trade Law', area_1_desc: 'Ship arrest, charterparty breaches, marine insurance, and cargo claims.',
+        area_2_title: 'Ship & Yacht S&P', area_2_desc: 'Saleform/MOA contracts, flag/registry registration, closing and title transfers.',
+        area_3_title: 'Maritime Labour Law', area_3_desc: 'Crew contracts, wage recovery, severance packages, and maritime lien enforcement.',
+        area_4_title: 'Enforcement & Bankruptcy Law', area_4_desc: 'Debt recovery proceedings, cancellation of objections, and liquidation of securities.',
+        area_5_title: 'Tenancy Law', area_5_desc: 'Execution of eviction undertakings, eviction actions, and rent determination.',
+        area_6_title: 'Labour & Employment Law', area_6_desc: 'Re-employment claims, severance/notice packages, mobbing, and workplace injury damages.',
+        area_7_title: 'Commercial Contracts', area_7_desc: 'Drafting distribution, franchise, partnership agreements, and cross-border transactions.',
+
         articles_eyebrow: 'Articles & Notes', articles_title: 'Notes, decisions, and <em>academic</em> reviews.',
         search_placeholder: 'Search title or keyword', filter_all: 'All', filter_maritime: 'Maritime Law', filter_seafarer: 'Maritime Labour', filter_tenancy: 'Tenancy Law',
         post_1_title: 'Precautionary Ship Arrest and Securing Maritime Claims', post_1_desc: 'Statutory requirements of ship arrest under Turkish Commercial Code and the 1999 Geneva Convention.',
@@ -467,30 +513,39 @@
       },
       el: {
         nav_about: 'Σχετικά', nav_resume: 'Βιογραφικό', nav_practice: 'Τομείς', nav_articles: 'Άρθρα', nav_contact: 'Επικοινωνία',
-        hero_eyebrow: 'Ναυτικό · Εργατικό · Μισθώσεις & Εκτέλεση',
+        hero_eyebrow: 'Ναυτικό · Αγοραπωλησίες · Μισθώσεις & Συμβάσεις',
         hero_title: 'Προσεγγίζοντας νομικά ζητήματα με <span>ακρίβεια</span>.',
-        hero_desc: 'Εξειδικευμένες νομικές υπηρεσίες στο ναυτικό δίκαιο, ναυτεργατικά δικαιώματα, μισθώσεις, εργατικό δίκαιο και εκτέλεση από τον Δικηγόρο Sedat Tunga.',
+        hero_desc: 'Εξειδικευμένες νομικές υπηρεσίες στο ναυτικό δίκαιο, αγοραπωλησίες πλοίων, ναυτεργατικά, εκτέλεση, μισθώσεις και συμβάσεις από τον Δικηγόρο Sedat Tunga.',
         hero_btn_resume: 'Βιογραφικό', hero_btn_articles: 'Άρθρα',
         about_eyebrow: 'Σχετικά', about_title: 'Ποιος είναι ο <em>Av. Sedat Tunga;</em>',
         about_p1: 'Ο Sedat Tunga αποφοίτησε από τη <strong>Νομική Σχολή του Πανεπιστημίου Koç</strong> το 2023. Ολοκλήρωσε το μεταπτυχιακό του (LL.M.) στο Διεθνές Ναυτικό Δίκαιο στο <strong>Swansea University</strong> το 2024.',
         about_p2: 'Η ακαδημαϊκή του έρευνα επικεντρώθηκε στα <strong>Ναυλοσύμφωνα (Charterparties)</strong> και τη <strong>Θαλάσσια Ασφάλιση (Marine Insurance)</strong>.',
-        about_p3: 'Σήμερα παρέχει νομικές υπηρεσίες στο Ναυτικό Δίκαιο, Ναυτεργατικό Δίκαιο, Δίκαιο Αναγκαστικής Εκτέλεσης, Εργατικό Δίκαιο και Δίκαιο Μισθώσεων.',
+        about_p3: 'Σήμερα παρέχει νομικές υπηρεσίες στο Ναυτικό Εμπόριο, Αγοραπωλησίες Πλοίων/Σκαφών, Ναυτεργατικό Δίκαιο, Αναγκαστική Εκτέλεση, Μισθώσεις, Εργατικό και Εμπορικές Συμβάσεις.',
         disclaimer_label: 'Σημείωση:', disclaimer_text: 'Το περιεχόμενο προορίζεται αποκλειστικά για ενημερωτικούς σκοπούς.',
         resume_eyebrow: 'Εκπαίδευση & Εμπειρία', resume_title: 'Ακαδημαϊκή πορεία και <em>εξειδίκευση</em>.',
         resume_intro: 'Συνδυασμός διεθνούς ναυτιλιακής πρακτικής και ακαδημαϊκού υποβάθρου.',
         timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Μεταπτυχιακό στο Διεθνές Ναυτικό Δίκαιο. Ειδίκευση σε ναυλοσύμφωνα και ναυτασφαλίσεις.',
         timeline_2_title: 'Koç University — Πτυχίο Νομικής', timeline_2_desc: 'Αποφοίτηση Νομικής με έμφαση στο ιδιωτικό και εμπορικό δίκαιο.',
-        timeline_current: 'ΣΗΜΕΡΑ', timeline_3_title: 'Δικηγορική Πρακτική', timeline_3_desc: 'Ναυτικό δίκαιο, ναυτεργατικά, εκτέλεση απαιτήσεων, μισθώσεις και εργατικές διαφορές.',
-        card_1_label: 'Τομέας 01', card_1_title: 'Ναυτικό & Ναυτεργατικό', card_1_desc: 'Αγοραπωλησίες πλοίων, κατασχέσεις πλοίων, ναυλοσύμφωνα και απαιτήσεις ναυτικών.',
-        card_2_label: 'Τομέας 02', card_2_title: 'Αναγκαστική Εκτέλεση', card_2_desc: 'Είσπραξη απαιτήσεων, συντηρητικές κατασχέσεις και διαχείριση οφειλών.',
-        card_3_label: 'Τομέας 03', card_3_title: 'Μισθώσεις & Εργατικό', card_3_desc: 'Αγωγές έξωσης, καθορισμός μισθώματος, εργατικές αποζημιώσεις και απολύσεις.',
+        timeline_current: 'ΣΗΜΕΡΑ', timeline_3_title: 'Δικηγορική Πρακτική', timeline_3_desc: 'Ναυτικό δίκαιο, αγοραπωλησίες πλοίων, εκτέλεση απαιτήσεων, μισθώσεις και εμπορικές συμβάσεις.',
+        
+        card_1_label: 'Τομέας 01', card_1_title: 'Ναυτικό Εμπορικό Δίκαιο', card_1_desc: 'Κατασχέσεις πλοίων, ναυλοσύμφωνα, ναύλοι, ζημίες φορτίου και θαλάσσια ασφάλιση.',
+        card_2_label: 'Τομέας 02', card_2_title: 'Αγοραπωλησίες Πλοίων/Σκαφών', card_2_desc: 'Συμβάσεις MOA, νηολόγηση, αλλαγή σημαίας και νομικός έλεγχος (due diligence).',
+        card_3_label: 'Τομέας 03', card_3_title: 'Ναυτεργατικό Δίκαιο', card_3_desc: 'Συμβάσεις ναυτολόγησης, δεδουλευμένοι μισθοί, αποζημιώσεις και ναυτικά προνόμια.',
+        card_4_label: 'Τομέας 04', card_4_title: 'Αναγκαστική Εκτέλεση', card_4_desc: 'Είσπραξη απαιτήσεων, διαταγές πληρωμής, συντηρητικές κατασχέσεις και εκποίηση.',
+        card_5_label: 'Τομέας 05', card_5_title: 'Δίκαιο Μισθώσεων', card_5_desc: 'Αγωγές έξωσης (υπεύθυνη δήλωση, ιδιοκατοίκηση), καθορισμός και αναπροσαρμογή μισθώματος.',
+        card_6_label: 'Τομέας 06', card_6_title: 'Εργατικό Δίκαιο', card_6_desc: 'Αποζημιώσεις απόλυσης, υπερωρίες, ακυρότητα απόλυσης και συμβάσεις εργασίας.',
+        card_7_label: 'Τομέας 07', card_7_title: 'Δίκαιο Συμβάσεων', card_7_desc: 'Σύνταξη, διαπραγμάτευση και ανάλυση κινδύνου εθνικών και διεθνών εμπορικών συμβάσεων.',
+
         practice_eyebrow: 'Τομείς Εξειδίκευσης', practice_title: 'Τομείς <em>δραστηριότητας</em>.',
         practice_intro: 'Ολοκληρωμένη νομική υποστήριξη προσαρμοσμένη στις ανάγκες του εντολέα.',
-        area_1_title: 'Ναυτικό Εμπόριο & Ασφάλιση', area_1_desc: 'Αγοραπωλησίες πλοίων/σκαφών, κατάσχεση πλοίων, ναυλοσύμφωνα και ζημίες φορτίου.',
-        area_2_title: 'Ναυτεργατικό Δίκαιο', area_2_desc: 'Συμβάσεις ναυτολόγησης, δεδουλευμένοι μισθοί, αποζημιώσεις και ναυτικά προνόμια.',
-        area_3_title: 'Δίκαιο Αναγκαστικής Εκτέλεσης', area_3_desc: 'Διαταγές πληρωμής, κατασχέσεις, ανακοπές και ρευστοποίηση εξασφαλίσεων.',
-        area_4_title: 'Εργατικό Δίκαιο', area_4_desc: 'Αποζημιώσεις απόλυσης, υπερωρίες, αγωγές ακυρότητας απόλυσης και συμβάσεις εργασίας.',
-        area_5_title: 'Δίκαιο Μισθώσεων & Ακίνητα', area_5_desc: 'Αγωγές εκκένωσης μισθίου (ιδιοκατοίκηση, υπερημερία, δήλωση), καθορισμός και αναπροσαρμογή μισθώματος.',
+        area_1_title: 'Ναυτικό Εμπορικό Δίκαιο', area_1_desc: 'Συντηρητική κατάσχεση πλοίων, ναυλοσύμφωνα, απαιτήσεις φορτίου και ναυτασφαλίσεις.',
+        area_2_title: 'Αγοραπωλησίες Πλοίων & Σκαφών', area_2_desc: 'Συμβάσεις Saleform/MOA, μεταβίβαση κυριότητας, νηολόγηση και αλλαγή σημαίας.',
+        area_3_title: 'Ναυτεργατικό Δίκαιο', area_3_desc: 'Ναυτολόγηση, μισθοί, αποζημιώσεις και προνομιακή ικανοποίηση επί του πλοίου.',
+        area_4_title: 'Αναγκαστική Εκτέλεση', area_4_desc: 'Είσπραξη οφειλών, ανακοπές και ρευστοποίηση εξασφαλίσεων.',
+        area_5_title: 'Δίκαιο Μισθώσεων', area_5_desc: 'Εκτέλεση δηλώσεων εκκένωσης, αγωγές έξωσης και αναπροσαρμογή ενοικίου.',
+        area_6_title: 'Εργατικό Δίκαιο', area_6_desc: 'Εργατικές διαφορές, αποζημιώσεις, mobbing και εργατικά ατυχήματα.',
+        area_7_title: 'Δίκαιο Συμβάσεων', area_7_desc: 'Εμπορικές συμβάσεις, συμφωνίες διανομής, franchise και εταιρικές συμφωνίες.',
+
         articles_eyebrow: 'Άρθρα / Μελέτες', articles_title: 'Νομικές σημειώσεις και <em>αναλύσεις</em>.',
         search_placeholder: 'Αναζήτηση άρθρου', filter_all: 'Όλα', filter_maritime: 'Ναυτικό Δίκαιο', filter_seafarer: 'Ναυτεργατικά', filter_tenancy: 'Μισθώσεις',
         post_1_title: 'Συντηρητική Κατάσχεση Πλοίου και Εξασφάλιση Ναυτικών Απαιτήσεων', post_1_desc: 'Προϋποθέσεις κατάσχεσης πλοίου βάσει του Τουρκικού Εμπορικού Κώδικα και της Σύμβασης Γενεύης 1999.',
@@ -507,30 +562,39 @@
       },
       ru: {
         nav_about: 'Обо мне', nav_resume: 'Резюме', nav_practice: 'Практика', nav_articles: 'Статьи', nav_contact: 'Контакты',
-        hero_eyebrow: 'Морское · Трудовое · Аренда и Взыскание',
+        hero_eyebrow: 'Морское · Купля-Продажа · Аренда и Контракты',
         hero_title: 'Правовые решения в <span>точном</span> контексте.',
-        hero_desc: 'Профессиональная юридическая помощь в сфере морского права, прав моряков, арендных споров, трудового права и взыскания задолженностей.',
+        hero_desc: 'Профессиональная юридическая помощь: морское право, купля-продажа судов, права моряков, взыскание долгов, аренда, трудовое право и контракты.',
         hero_btn_resume: 'Смотреть резюме', hero_btn_articles: 'Читать статьи',
         about_eyebrow: 'Обо мне', about_title: 'Кто такой <em>адвокат Седат Тунга?</em>',
         about_p1: 'Адвокат Седат Тунга окончил <strong>Юридический факультет Университета Коч</strong> в 2023 году. В 2024 году завершил магистратуру (LL.M.) по международному морскому праву в <strong>Университете Суонси</strong> (Swansea University, Великобритания).',
         about_p2: 'В рамках магистратуры его диссертация была посвящена договорам <strong>фрахтования (Charterparties)</strong> и <strong>морскому страхованию (Marine Insurance)</strong>.',
-        about_p3: 'В настоящее время ведет практику в сфере <strong>морского права</strong>, <strong>морского трудового права</strong>, <strong>исполнительного производства</strong>, <strong>трудового</strong> и <strong>арендного права</strong>.',
+        about_p3: 'Ведет практику в сферах: морское торговое право, купля-продажа судов и яхт, морское трудовое право, исполнительное производство, арендное, трудовое и договорное право.',
         disclaimer_label: 'Примечание:', disclaimer_text: 'Материалы сайта носят исключительно информационный характер.',
         resume_eyebrow: 'Образование и Опыт', resume_title: 'Образование, специализация и <em>практика</em>.',
         resume_intro: 'Сочетание международного морского права и практического опыта.',
         timeline_1_title: 'Swansea University — LL.M.', timeline_1_desc: 'Магистр международного морского права. Исследования договоров фрахтования и страхования.',
         timeline_2_title: 'Koç University — Бакалавр', timeline_2_desc: 'Юридический факультет, специализация на частном праве.',
-        timeline_current: 'НАСТОЯЩЕЕ ВРЕМЯ', timeline_3_title: 'Адвокатская деятельность', timeline_3_desc: 'Ведение морских споров, защита прав моряков, выселение арендаторов, взыскание долгов.',
-        card_1_label: 'Сфера 01', card_1_title: 'Морское право и права моряков', card_1_desc: 'Купля-продажа судов, арест судов, чартер-партии, споры по грузам и зарплате экипажа.',
-        card_2_label: 'Сфера 02', card_2_title: 'Исполнительное производство', card_2_desc: 'Взыскание задолженностей, наложение обеспечительных мер и исполнительное производство.',
-        card_3_label: 'Сфера 03', card_3_title: 'Арендное и Трудовое право', card_3_desc: 'Выселение арендаторов, пересмотр арендной платы, трудовые споры и компенсации.',
+        timeline_current: 'НАСТОЯЩЕЕ ВРЕМЯ', timeline_3_title: 'Адвокатская деятельность', timeline_3_desc: 'Морское право, сделки с судами, исполнительное производство, арендные, трудовые и контрактные споры.',
+        
+        card_1_label: 'Сфера 01', card_1_title: 'Морское торговое право', card_1_desc: 'Арест судов, чартерные споры, фрахт, претензии по грузу и морское страхование.',
+        card_2_label: 'Сфера 02', card_2_title: 'Купля-продажа судов и яхт', card_2_desc: 'Договоры MOA, регистрация флага и реестра, закрытие сделок и due diligence.',
+        card_3_label: 'Сфера 03', card_3_title: 'Морское трудовое право', card_3_desc: 'Трудовые договоры моряков, задолженность по зарплате, выходные пособия и морской залог.',
+        card_4_label: 'Сфера 04', card_4_title: 'Исполнительное производство', card_4_desc: 'Судебное и внесудебное взыскание долгов, обеспечительные меры и обращение взыскания.',
+        card_5_label: 'Сфера 05', card_5_title: 'Арендное право', card_5_desc: 'Выселение арендаторов (обязательство, неуплата), определение и пересмотр арендной платы.',
+        card_6_label: 'Сфера 06', card_6_title: 'Трудовое право', card_6_desc: 'Восстановление на работе, выходные пособия, компенсации, моббинг и трудовые договоры.',
+        card_7_label: 'Сфера 07', card_7_title: 'Договорное право', card_7_desc: 'Составление, аудит рисков и расторжение национальных и международных коммерческих контрактов.',
+
         practice_eyebrow: 'Сферы практики', practice_title: 'Ключевые направления <em>деятельности</em>.',
         practice_intro: 'Комплексная юридическая защита интересов клиентов.',
-        area_1_title: 'Морское право и страхование', area_1_desc: 'Купля-продажа судов и яхт, арест судов, чартерные споры, претензии по грузу и страхование.',
-        area_2_title: 'Морское трудовое право', area_2_desc: 'Трудовые договоры моряков, задолженность по зарплате, выходные пособия и морской залог.',
-        area_3_title: 'Исполнительное производство', area_3_desc: 'Судебное и внесудебное взыскание долгов, обращение взыскания на залоги.',
-        area_4_title: 'Трудовое право', area_4_desc: 'Восстановление на работе, взыскание выходных пособий, сверхурочных и аудит договоров.',
-        area_5_title: 'Арендное право и Недвижимость', area_5_desc: 'Выселение арендаторов (обязательство, неуплата, нужды собственника), определение арендной платы.',
+        area_1_title: 'Морское торговое право', area_1_desc: 'Арест судов, чартер-партии, претензии по грузам и споры по страхованию.',
+        area_2_title: 'Купля-продажа судов и яхт', area_2_desc: 'Контракты Saleform/MOA, смени флага, регистрация права собственности.',
+        area_3_title: 'Морское трудовое право', area_3_desc: 'Защита зарплаты моряков, морской залог и споры с судовладельцами.',
+        area_4_title: 'Исполнительное производство', area_4_desc: 'Взыскание задолженностей, наложение арестов и исполнение решений.',
+        area_5_title: 'Арендное право', area_5_desc: 'Принудительное выселение арендаторов, споры по арендной плате.',
+        area_6_title: 'Трудовое право', area_6_desc: 'Трудовые споры, взыскание компенсаций, несчастные случаи на производстве.',
+        area_7_title: 'Договорное право', area_7_desc: 'Дистрибьюторские, франчайзинговые и партнерские соглашения.',
+
         articles_eyebrow: 'Блог / Аналитика', articles_title: 'Правовые заметки и <em>анализ</em>.',
         search_placeholder: 'Поиск статей', filter_all: 'Все', filter_maritime: 'Морское право', filter_seafarer: 'Морской труд', filter_tenancy: 'Аренда',
         post_1_title: 'Арест морских судов и обеспечение морских требований', post_1_desc: 'Условия наложения ареста на суда в соответствии с ТТК Турции и Женевской конвенцией 1999 года.',
@@ -575,7 +639,7 @@
     const savedLang = localStorage.getItem('site_lang') || 'tr';
     changeSiteLanguage(savedLang);
 
-    // Koyu / Açık Tema
+    // Tema Yönetimi
     const themeBtn = document.getElementById('theme-toggle');
     const themeIcon = themeBtn ? themeBtn.querySelector('use') : null;
     function setThemeMode(dark) {
@@ -606,7 +670,7 @@
       }));
     }
 
-    // Makale Açma/Kapama Modalı
+    // Modal
     const modalEl = document.getElementById('article-modal');
     const modalKicker = document.getElementById('modal-kicker');
     const modalTitle = document.getElementById('modal-title');
@@ -637,7 +701,7 @@
     modalClose?.addEventListener('click', closeModal);
     modalEl?.addEventListener('click', e => { if (e.target === modalEl) closeModal(); });
 
-    // Makale Filtreleme ve Arama
+    // Filtreleme ve Arama
     const searchInp = document.getElementById('article-search');
     const filterBtns = document.querySelectorAll('[data-filter]');
     const cards = document.querySelectorAll('.article-card');
@@ -668,7 +732,7 @@
       });
     });
 
-    // Formspree İletişim Formu
+    // Form Gönderimi
     const formEl = document.getElementById('contact-form');
     const statusEl = document.getElementById('form-status');
     const subBtn = document.getElementById('submit-btn');
@@ -704,7 +768,7 @@
 
     // vCard İndir
     document.getElementById('vcard-download')?.addEventListener('click', () => {
-      const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:Av. Sedat Tunga\nN:Tunga;Sedat;;;\nTITLE:Avukat | Maritime, Labour & Tenancy Law\nEMAIL;TYPE=WORK:tungasedat@gmail.com\nTEL;TYPE=WORK:+90 538 612 81 25\nADR;TYPE=WORK:;;İstanbul;İstanbul;;;Türkiye\nURL:https://www.sedattunga.av.tr/\nEND:VCARD`;
+      const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:Av. Sedat Tunga\nN:Tunga;Sedat;;;\nTITLE:Avukat | Maritime, Commercial & Tenancy Law\nEMAIL;TYPE=WORK:tungasedat@gmail.com\nTEL;TYPE=WORK:+90 538 612 81 25\nADR;TYPE=WORK:;;İstanbul;İstanbul;;;Türkiye\nURL:https://www.sedattunga.av.tr/\nEND:VCARD`;
       const url = URL.createObjectURL(new Blob([vcard], { type: 'text/vcard;charset=utf-8' }));
       const a = document.createElement('a');
       a.href = url; a.download = 'av-sedat-tunga.vcf'; a.click(); URL.revokeObjectURL(url);
